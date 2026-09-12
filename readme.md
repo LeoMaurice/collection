@@ -258,8 +258,8 @@ glm(y ~ x1 + x2, family = binomial(), data = base) # Logit
 Pour la plupart des usages, **{duckdb}** est
 
 - [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) :  aujourd'hui la solution recommandée : très performant, fonctionne hors mémoire, lit directement les fichiers Parquet et s'intègre parfaitement avec l'écosystème `{tidyverse}` avec `{dplyr}`.
-- https://rdatatable.gitlab.io/data.table/ : référence historique pour les traitements rapides en mémoire. Extrêmement performant mais ne permet pas nativement de travailler sur des données plus grandes que la mémoire disponible. Beaucoup moins verbeux que le `{tidyverse}`, petit coût d'entrée, pour cela je ne préfère pas.
-- [**{polars}**](https://pola-rs.github.io/r-polars/) : interface R du moteur Polars. Très performant sur les données volumineuses, avec exécution paresseuse (*lazy evaluation*) et traitements pouvant être effectués hors mémoire. Concurrent direct de l'association `{duckdb}` + `{arrow}`.
+- [**{futurize}**}(https://futurize.futureverse.org/) : goto pour la parallélisation. Permet de très simplement rendre les fonctions parallélisables grâce au [**{futureverse}**](https://www.futureverse.org/). Supporte de nombreuses fonctions comme `lapply()`, `purrr::map()`, ou `foreach::foreach()`.
 - [**{sparklyr}**](https://spark.posit.co/) : interface R vers Apache Spark. Permet de distribuer les calculs sur un cluster mais nécessite une infrastructure dédiée. Souvent excessif pour les besoins courants.
-- https://future.futureverse.org/ : infrastructure de parallélisation permettant d'exploiter plusieurs cœurs ou plusieurs machines.
-- https://furrr.futureverse.org/ : version parallèle des fonctions de `{purrr}` reposant sur `{future}`.
+- [**{data.table}**](https://r-datatable.com/) : référence historique pour les traitements rapides en mémoire. Extrêmement performant mais ne permet pas nativement de travailler sur des données plus grandes que la mémoire disponible. Beaucoup moins verbeux que le `{tidyverse}`, petit coût d'entrée, pour cela je ne préfère pas.
+- [**{polars}**](https://pola-rs.github.io/r-polars/) : interface R du moteur Polars écrit en Rust. Très performant sur les données volumineuses, avec exécution paresseuse (*lazy evaluation*) et traitements pouvant être effectués hors mémoire. Concurrent direct de l'association `{duckdb}` + `{arrow}`. Défaut similaire à `{data.table}` : très éloigné de la formulation `{tidyverse}`, reste plus verbeux. Avantage : uniformité de l'écriture ET du traitement en mémoire et hors mémoire.
+
