@@ -15,6 +15,7 @@
 - [**R Packages**](https://r-pkgs.org/) : essentiel pour apprendre à écrire un package en R, avec l'ensemble des bonnes pratiques.
 - [**What they forgot to teach you about R**](https://rstats.wtf/) : un titre pompeux ou ironique mais beaucoup de très bons conseils sur la gestion d'un projet R. En cours.
 - [**Big Book of R**](https://www.bigbookofr.com/) : collection de livres (numériques) publiés sur R, on y trouve souvent son bonheur.
+- [**Introduction to Econometrics with R]**(https://www.econometrics-with-r.org/)
 
 ## Pour les anciens utilisateurs de SAS :
 - Des ressources dans {**utilitR**}
@@ -110,6 +111,21 @@ glm(y ~ x1 + x2, family = binomial(), data = base) # Logit
 - [**{psych}**](https://cran.r-project.org/package=psych) : psychométrie, analyses de fiabilité et analyse factorielle.
 - [**{ordinal}**](https://cran.r-project.org/package=ordinal) : modèles pour variables ordinales.
 - [**{survival}**](https://cran.r-project.org/package=survival) : modèles de survie.
+
+### Séries temporelles
+
+Beaucoup de packages existent pour analyser les séries temporelles. Je propose deux "univers" et quelques autres packages.
+
+- [**{tidyverts}**](https://tidyverts.org/) :
+  - [**{tsibble}**](https://tsibble.tidyverts.org/) : format préféré, incorporé dans le l'univers  :
+  - [**{fable}**](https://fable.tidyverts.org/) : modèles de prévision compatibles avec les tsibble — ARIMA, ETS, modèles naïfs, régression, etc. Très cohérent avec dplyr, mais son vocabulaire demande un petit temps d’adaptation.
+  - [**{feasts}**](https://feasts.tidyverts.org/) : exploration des séries, décompositions STL, ACF/PACF, saisonnalité et extraction de caractéristiques.
+- [**{xts}**](https://joshuaulrich.github.io/xts/)(construit à partir de [**{zoo}**](https://cran.r-project.org/web/packages/zoo/index.html)) utilisé dans les packages :
+  - [**{timetk}**](https://business-science.github.io/timetk/) : analyses de séries temporelles
+  - [**{modeltime}**](https://business-science.github.io/modeltime/) : pour créer des workflow `{tidymodels}`
+- [**{tsbox}**](https://docs.ropensci.org/tsbox/) pour faire des convertions entre formats.
+- [**{slider}**](https://slider.r-lib.org/) : fournit des fenêtres glissantes avec une syntaxe proche de `{purrr}`.
+
 
 ### Machine learning
 
