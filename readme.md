@@ -15,7 +15,7 @@
 - [**R Packages**](https://r-pkgs.org/) : essentiel pour apprendre à écrire un package en R, avec l'ensemble des bonnes pratiques.
 - [**What they forgot to teach you about R**](https://rstats.wtf/) : un titre pompeux ou ironique mais beaucoup de très bons conseils sur la gestion d'un projet R. En cours.
 - [**Big Book of R**](https://www.bigbookofr.com/) : collection de livres (numériques) publiés sur R, on y trouve souvent son bonheur.
-- [**Introduction to Econometrics with R]**(https://www.econometrics-with-r.org/)
+- [**Introduction to Econometrics with R**](https://www.econometrics-with-r.org/)
 
 ## Pour les anciens utilisateurs de SAS :
 - Des ressources dans {**utilitR**}
