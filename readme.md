@@ -6,6 +6,7 @@
 - [**Newslett'R**](https://leoniefvr.github.io/Newslett-R/) : mis en place à la Drees avec une introduction à R, des exercices, très bien pour débuter.
 - [**R Graph Gallery**](https://r-graph-gallery.com/) : collection de graphiques en R pour s'inspirer.
 - [**R Universe**](https://r-universe.dev/search) : collection des univers de packages R.
+- [**ROpenSci**](https://ropensci.org/) : 
 - [**R OpenGov**](https://ropengov.org/) : packages gouvernementaux d'accès aux données.
 
 ## Livres
@@ -136,7 +137,21 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
 - [**{xgboost}**](https://xgboost.readthedocs.io/) : gradient boosting, particulièrement performant sur les données tabulaires.
 - [**{brulee}**](https://cran.r-project.org/package=brulee) : réseaux de neurones entraînés dans l'écosystème `{tidymodels}`.
 
-## Outils [**r-lib**](https://github.com/r-lib)
+## Outils, principalement [**r-lib**](https://github.com/r-lib)
+
+### Programmation avancée et gestion des environnements
+
+- [**{renv}**](https://rstudio.github.io/renv/) : gestion des environnements et des versions de packages propres à chaque projet.
+- [**{pak}**](https://pak.r-lib.org/) : installation de packages et résolution de leurs dépendances.
+- [**{keyring}**](https://keyring.r-lib.org/) : gestion des secrets.
+- [**{rlang}**](https://rlang.r-lib.org/) : programmation fonctionnelle et métaprogrammation, notamment les expressions, les environnements et la capture des arguments.
+- [**{vctrs}**](https://vctrs.r-lib.org/) : création de classes vectorielles et définition de leur comportement.
+- [**{cli}**](https://cli.r-lib.org/) : création de messages, avertissements et erreurs lisibles.
+- [**{lifecycle}**](https://lifecycle.r-lib.org/) : gestion des fonctions expérimentales, obsolètes ou dépréciées.
+- [**{withr}**](https://withr.r-lib.org/) : modification temporaire des options, variables d’environnement et répertoires de travail.
+- [**{memoise}**](https://memoise.r-lib.org/) : mise en cache des résultats de fonctions.
+- [**{groundhog}**](https://groundhogr.com/) : reproduction d’environnements en fixant les versions des packages utilisés.
+- [**{config}**](https://rstudio.github.io/config/) : permet de charger un fichier `config.yml` pour spécifier des adresses, ou des valeurs à utiliser dans l'ensemble d'un projet.
 
 ### Développement de packages
 
@@ -148,19 +163,43 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
 - [**{covr}**](https://covr.r-lib.org/) : mesure de la couverture des tests.
 - [**GitHub Actions**](https://docs.github.com/en/actions) : automatisation des tests et vérifications d’un package.
 
+- [**{targets}**](https://books.ropensci.org/targets/) : pipelines de données reproductibles, exécution incrémentale, parallélisation et projets analytiques complexes.
 
-### Programmation avancée et gestion des environnements
+- [**{config}**](https://rstudio.github.io/config/) : gestion des paramètresns selon l'environnement (développement, production, etc.).
 
-- [**{rlang}**](https://rlang.r-lib.org/) : programmation fonctionnelle et métaprogrammation, notamment les expressions, les environnements et la capture des arguments.
-- [**{vctrs}**](https://vctrs.r-lib.org/) : création de classes vectorielles et définition de leur comportement.
-- [**{cli}**](https://cli.r-lib.org/) : création de messages, avertissements et erreurs lisibles.
-- [**{lifecycle}**](https://lifecycle.r-lib.org/) : gestion des fonctions expérimentales, obsolètes ou dépréciées.
-- [**{withr}**](https://withr.r-lib.org/) : modification temporaire des options, variables d’environnement et répertoires de travail.
-- [**{memoise}**](https://memoise.r-lib.org/) : mise en cache des résultats de fonctions.
-- [**{renv}**](https://rstudio.github.io/renv/) : gestion des environnements et des versions de packages propres à chaque projet.
-- [**{pak}**](https://pak.r-lib.org/) : installation de packages et résolution de leurs dépendances.
-- [**{groundhog}**](https://groundhogr.com/) : reproduction d’environnements en fixant les versions des packages utilisés.
+- [**{keyring}**](https://keyring.r-lib.org/) :  des mots de passe, jetons d'authentification et autres secrets.
 
+- [**{clock}**](https://clock.r-lib.org/) : manipulation avancée et dates, heures, calendriers et fuseaux horaires.
+
+- [**{tidylog}**](https://github.com/: remplacement transparent de `{dplyr}` affichant automatiquement les effets des opérations sur les données.
+
+- https://rstudio.github.io/pointblank/ : validation et contrôle qualité des données dans les pipelines de traitement.
+
+- [**{car}**](https://cran.r-project.org/package=car) iagnostic statistique, analyses de variance et calcul d'indicateurs comme le VIF.
+
+- [**{emmeans}**](https://emmeans.github.io/emmeans/) : estimation de moyennes marginales, contrastes et comparaisons post-hoc pour les modèles statistiques.
+
+- [**{scales}**](https://scales.r-lib.org/) : mise en forme des axes, labels, pourcentages, devises et graphiques sous `{ggplot2}`.
+
+- [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sansns les graphiques `{ggplot2}`.
+
+- [**{viridis}**](https://sjmgarnier.github.io/viridis/) : palettes de ellement uniformes, adaptées aux impressions et au daltonisme.
+
+- [**{officer}**](https://davidgohel.r/ : création et modification de documents Word et PowerPoint depuis R.
+
+- [**{rvg/davidgohel.github.io/rvg/ : export de graphiques vectoriels éditables dans PowerPoint ou Excel.
+
+- [**{httr2}**](https://httr2.r-lib.org/) : interface moderne avec des API web, télécharger des ressources et gérer l'authentification.
+
+- [**{jsonlite}**](https://jeroen.r-universe.dev/jsonlite)re et manipulation de données au format JSON.
+
+- https://bench.r-lib.org/ : mesure et comparaison des performances d'exécution du code R.
+
+- https://rstudio.github.io/profvis/ : profilage du code afin d'identifier les parties les plus coûteuses en temps de calcul.
+
+- https://docs.ropensci.org/skimr/ : production de résumés exploratoires lisibles et complets des jeux de données.
+
+- https://docs.ropensci.org/visdat/ : visualisation rapide de la structure des données, des types de variables et des valeurs manquantes.
 ## Visualisations
 
 ### Graphiques
