@@ -117,12 +117,12 @@ glm(y ~ x1 + x2, family = binomial(), data = base) # Logit
 Beaucoup de packages existent pour analyser les séries temporelles. Je propose deux "univers" et quelques autres packages.
 
 - [**{tidyverts}**](https://tidyverts.org/) :
-  - [**{tsibble}**](https://tsibble.tidyverts.org/) : format préféré, incorporé dans le l'univers  :
-  - [**{fable}**](https://fable.tidyverts.org/) : modèles de prévision compatibles avec les tsibble — ARIMA, ETS, modèles naïfs, régression, etc. Très cohérent avec dplyr, mais son vocabulaire demande un petit temps d’adaptation.
+  - [**{tsibble}**](https://tsibble.tidyverts.org/) : format préféré
   - [**{feasts}**](https://feasts.tidyverts.org/) : exploration des séries, décompositions STL, ACF/PACF, saisonnalité et extraction de caractéristiques.
+  - [**{fable}**](https://fable.tidyverts.org/) : modèles de prévision — ARIMA, ETS, modèles naïfs, régression, etc.
 - [**{xts}**](https://joshuaulrich.github.io/xts/)(construit à partir de [**{zoo}**](https://cran.r-project.org/web/packages/zoo/index.html)) utilisé dans les packages :
-  - [**{timetk}**](https://business-science.github.io/timetk/) : analyses de séries temporelles
-  - [**{modeltime}**](https://business-science.github.io/modeltime/) : pour créer des workflow `{tidymodels}`
+  - [**{timetk}**](https://business-science.github.io/timetk/) : exploration des séries.
+  - [**{modeltime}**](https://business-science.github.io/modeltime/) : modèles de prévision, compatible avec un workflow `{tidymodels}`.
 - [**{tsbox}**](https://docs.ropensci.org/tsbox/) pour faire des convertions entre formats.
 - [**{slider}**](https://slider.r-lib.org/) : fournit des fenêtres glissantes avec une syntaxe proche de `{purrr}`.
 
