@@ -242,6 +242,24 @@ glm(y ~ x1 + x2, family = binomial(), data = base) # Logit
 - **Cartographie interactives** :
   - [**{leaflet}**](https://rstudio.github.io/leaflet/) : création de cartes interactives.
 
+## Bases de données *SQL*
 
+- [**{DBI}**](https://dbi.r-dbi.org/) : interface standard pour les bases de données en R. Définit les fonctions génériques (`dbConnect()`, `dbGetQuery()`, `dbWriteTable()`, etc.) indépendamment du moteur utilisé.
+- [**{odbc}**](https://odbc.r-dbi.org/) : référence pour se connecter à des bases de données via ODBC (SQL Server, Oracle, PostgreSQL, Snowflake, etc.).
+- [**{dbplyr}**](https://dbplyr : traduit automatiquement le code `{dplyr}` en SQL et exécute les calculs directement dans la base de données avec `collect()`. Mature et parfaitement intégré au tidyverse.
+- Connexion à des moteurs spécifiques : [**{ROracle}**](https://cran.r-project.org/package=ROracle), [**{rpostgres}**](https://rpostgres.r-dbi.org/), [**{MariaDB}](https://rmariadb.r-dbi.org/).
+- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) : moteur analytique embarqué extrêmement performant, particulièrement adapté aux fichiers Parquet et aux jeux de données volumineux. Ne nécessite aucun serveur.
+    - [**{duckply}**](https://duckplyr.tidyverse.org/) : alternative à `{dplyr}` avec un appel direct à l'API de Duckdb sans passage par un code SQL. Plus rapide mais encore moins mature et moins riche fonctionnellement que `{dbplyr}`.
+    - [**{arrow}**](https://arrow.apache.org/docs/r/) : lecture et écriture de fichiers Parquet, Feather et autres formats colonaires. Complément naturel de `{duckdb}` pour les workflows de données volumineuses.[**{nanoparquet}**](https://nanoparquet.r-lib.org/) plus rapide pour les Parquet.
+- [**{pool}**](https://rstudio.github.io/pool/) : gestion de pools de connexions aux bases de données, particulièrement utile dans les applications Shiny.
 
+### Calcul sur des données volumineuses
 
+Pour la plupart des usages, **{duckdb}** est
+
+- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) :  aujourd'hui la solution recommandée : très performant, fonctionne hors mémoire, lit directement les fichiers Parquet et s'intègre parfaitement avec l'écosystème `{tidyverse}` avec `{dplyr}`.
+- https://rdatatable.gitlab.io/data.table/ : référence historique pour les traitements rapides en mémoire. Extrêmement performant mais ne permet pas nativement de travailler sur des données plus grandes que la mémoire disponible. Beaucoup moins verbeux que le `{tidyverse}`, petit coût d'entrée, pour cela je ne préfère pas.
+- [**{polars}**](https://pola-rs.github.io/r-polars/) : interface R du moteur Polars. Très performant sur les données volumineuses, avec exécution paresseuse (*lazy evaluation*) et traitements pouvant être effectués hors mémoire. Concurrent direct de l'association `{duckdb}` + `{arrow}`.
+- [**{sparklyr}**](https://spark.posit.co/) : interface R vers Apache Spark. Permet de distribuer les calculs sur un cluster mais nécessite une infrastructure dédiée. Souvent excessif pour les besoins courants.
+- https://future.futureverse.org/ : infrastructure de parallélisation permettant d'exploiter plusieurs cœurs ou plusieurs machines.
+- https://furrr.futureverse.org/ : version parallèle des fonctions de `{purrr}` reposant sur `{future}`.
