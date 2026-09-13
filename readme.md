@@ -1,4 +1,4 @@
-# Essentiels pour R
+g# Essentiels pour R
 
 ## Ecosystème
 
@@ -151,12 +151,11 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 
 ### Programmation orientée objet
 
-- [**{R6}**](https://r6.r-lib.org/) : système de classes encapsulées et mutables, avec héritage, méthodes publiques et privées.
-- [**{S7}**](https://rconsortium.github.io/S7/) : système de classes moderne visant à combiner la simplicité de S3 avec la rigueur de S4.
-- [**{vctrs}**](https://vctrs.r-lib.org/) : outils pour créer des classes vectorielles S3 robustes et cohérentes avec l'écosystème tidyverse.
+- [**{R6}**](https://r6.r-lib.org/) : système de classes encapsulées et mutables, avec héritage, méthodes publiques et privées. Maintenu dans le cadre de `{r-lib}`, utilisé dans le `{tidyverse}`. L'accès aux méthodes et propriétés se fait par `$` (et non `.`).
+- [**{S7}**](https://rconsortium.github.io/S7/) : système de classes moderne visant à combiner la simplicité de S3 avec la rigueur de S4 (validation des propriétés, constructeur). Pas d'encapsulation. Sera implémanté en base R sooner than later. Accès aux propriétés avec `@`. S7 comme S3 et S4 repose sur des fonctions génériques qui appelent la méthode correspondante de la classe (comme `print.myClass`).
 - **S3/S4** : systèmes d'objets historiques intégrés à R ; S3 privilégie la simplicité, tandis que S4 fournit des classes, méthodes et validations formelles.
-- [**{methods}**](https://stat.ethz.ch/R-manual/R-devel/library/methods/html/methods-package.html) : package de base fournissant l'infrastructure S4 et les classes de référence de R.
-
+ - [**{vctrs}**](https://vctrs.r-lib.org/) : outils pour créer des classes vectorielles S3 robustes et cohérentes avec l'écosystème tidyverse.
+ - [**{methods}**](https://stat.ethz.ch/R-manual/R-devel/library/methods/html/methods-package.html) : package de base fournissant l'infrastructure S4 et les classes de référence (RC ou R5, peu utilisées) de R.
 
 ### Benchmarking
 
@@ -391,6 +390,107 @@ Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains o
 - [**JupyterLite**](https://jupyterlite.readthedocs.io/) : distribution de JupyterLab s'exécutant entièrement dans le navigateur grâce à des kernels compilés en `WebAssembly`, notamment Pyodide et Xeus.
 - [**JupyterLite Xeus**](https://github.com/jupyterlite/xeus-lite) : extension permettant d'utiliser des kernels Xeus dans JupyterLite, notamment `xeus-python` et `xeus-r`, sans serveur distant.
 
-
 ## Miscellaneous
 - [**{reticulate}**](https://rstudio.github.io/reticulate/) : interface R à Python.
+
+
+## Rapide description de chaque système OO
+
+Rappel des types de bases de R : les scalaires, les vecteurs, les fonctions, les environnements, S4, les composants de language (et quelques autres très rares).
+
+S3/S4/S7 ont tous en commun d'avoir en gros des propriétés, et des méthodes définies à travers des génériques.
+S3 est informel. S4 a une définition formelle, mais avec des lourdeurs. S7 est beaucoup plus efficace et claire dans la définition de la class et de ses composants.
+
+### S3
+
+- S3 est très simple et ne fournit aucune définition formelle. L'appartenance d'un objet à une classe ne dépend que de l'attribut `class`. Il faut donc adopter des conventions informelles, ici de [Hadley](https://adv-r.hadley.nz/s3.html) :
+- une classe S3 est un objet R ordinaire auquel on ajoute une classe :
+  ```r
+  structure(list(), class = "myClass", unePropriete = "maValeur")
+  ```
+  L’objet peut avoir n’importe quel type sous-jacent : vecteur atomique, liste, matrice, fonction, etc. Une classe S3 n’est donc pas nécessairement une liste et ne possède pas nécessairement de propriétés accessibles avec `$`.
+- un constructeur bas niveau `new_myClass()`, crée un objet de myClass, principalement à usage interne.
+- un validateur `validate_myClass()`, principalement à usage interne.
+- un constructeur utilisateur `myClass()` ou helper, orienté vers l'utilisateur, donc avec une documentation détaillée.
+- les méthodes passent par des fonctions génériques, définies grâce à `UseMethod` :
+  ```r
+  fctGénérique <- function(x, ...) {
+   # actions sur x
+   UseMethod('fctGénérique')
+  }
+  ```
+  Une méthode est simplement une fonction nommée `fctGenerique.myClass`. La bonne pratique est d'avoir exactement les mêmes arguments que `fctGénérique`, le premier est l'objet qui sert au *dispatch* du générique à la bonne class.
+- les classes S3 sont censées être unmutable et suivre la sémantique *copy-on-modify* de R : on retourne généralement un nouvel objet plutôt que de modifier l’ancien en place grâce au constructeur de bas niveau.
+- les classes S3 peuvent être hérités en ayant plusieurs éléments attachés à `class`. La priorité dans le dispatch se fait dans l'ordre dans le quel on définit `class`. `typeof` permet de connaitre les class et type sous jacents.
+- globalement une class S3 est un type de base de R agrandi de propriétés assessibles avec `$` et de changements de comportements des fonctions génériques. S3 me parait tout particulièrement adapté à ce besoin de faire une extension simple de l'existant de R. d'où :
+- `{vctrs}` complète S3 en fournissant un cadre cohérent pour créer des classes vectorielles et gérer leur taille, leur recyclage, leur combinaison et leur coercition.
+ - nouvelle class en renvoyant `new_vctr()` dans `new_myClass()` qui hérite donc de la class `vctrs_vctr`.
+ - cet héritage a plusieurs avantages :
+ - `print()` et `str()` utilise `format()` qu'il suffit donc à définir pour notre nouvelle classe pour de jolies sorties. `as.data.frame.vectrs_vctr()`, `[`, `[[`, `$`, `[<-`, `[[<-` et `$<-` font déjà les choses bien.
+ - `vec_cast` facilite l'écriture du validateur
+ - il faut toujours défini la méthode `format()` grâce aux fonctions de plus bas niveau comme `formatC()`.
+ - et beaucoup d'autres choses...
+
+### S4
+- S4 est défini grâce à `{methods}` et inclut un définition formelle. Cependant, aucune référence sur S4. La documentation built in R diverge des pratiques, notamment des bioinformaticiens de Bioconductor, grands utilisateurs de S4.
+- création avec de la class avec :
+  ```r
+    setClass("Person", 
+      slots = c(
+        name = "character", 
+        age = "numeric"
+      ),
+      prototype = list( # default value
+        name = NA_character_,
+        age = NA_real_
+      )
+    )
+  ```
+  `new("Person", name = "John Smith", age = NA_real_)` permet de créer des objets. `new` est le constructeur à usage interne.
+- il faut donc définir une fonction `Person` qui renvoit un `methods::new('Person', ...)`.
+- validateur créer avec `setValidity('Person', function(obj) {})` et utiliser avec `validObject(obj)`. Sans validateur le type des slots est formel et peut gênérer des erreurs.
+- l'accès au slot se fait **en interne** par `@` ou `slot(obj, 'age')`. En externe, la bonne pratique est d'utiliser un accesseur mais il n'y a pas de logique de public.
+- les accesseurs peuvent être créer avec d'abord la création de générique, par exemple pour le slot `age` :
+  ```r
+  setGeneric("age", function(x) standardGeneric("age"))
+  setGeneric("age<-", function(x, value) standardGeneric("age<-"))
+  ```
+- puis ensuite la création de la méthode correspondante :
+ ```r
+ setMethod("age", "Person", function(x) x@age)
+ setMethod("age<-", "Person", function(x, value) {
+   x@age <- value
+   x
+ })
+ ```
+- l'héritage se fait grâce à l'argument `contains` de `setClass` qui implique qu'un des slots contient une des class parents mentionnées.
+- les objets S4 ont le type sous-jacent S4 et pas un type de base.
+
+### S7
+
+- le but énoncé de S7 est de faire formel comme S4, simple comme S3.
+- création d'une nouvelle classe avec :
+  ```r
+     myClass <- new_class(
+        'myClass',
+        properties = list(myPropriete = class_character_),
+        parent = myParent
+     )
+     myClass := new_class(
+        properties = list(myPropriete = class_character_),
+        parent = myParent
+     )
+  ```
+- `:=` permet d'éviter de rappeler le nom de la class. La doc S7 et moi-même nous concentrerons sur cet usage.
+- vu qu'on définit le type des propriétés, on a des erreurs si on ne s'y conforme pas, même en interne.
+- accès aux propriétés en interne avec `@`.
+- la class d'un objet S7 est accessible avec `S7_class` mais aussi avec `class` et donc compatible avec S3.
+- définition des méthodes :
+ - définition de la générique : `myGeneric := new_generic('x')`.
+ - implémentation de la méthode elle-même avec : `method(myGeneric, myClass) <- function(..){}`.
+- il y a un constructeur de base avec `myClass()`. On peut le redéfinir et préciser dans new_class l'argument `constructor`, il faut alors renvoyer `new_object(.data)`, `.data` est toujours l'objet `myClass`.
+- on peut définir un validateur avec l'argument `validator` de `new_class` : la fonction doit commencer par `self` qui est l'objet à valider.
+- on peut dire que la classe est abstraite avec l'argument `abstract`.
+- l'argument `package` de `new_class` est défini automatique si est on est dans un package. Dans ce cas, le constructeur doit être exporté.
+
+### R6
