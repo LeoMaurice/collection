@@ -17,7 +17,7 @@
 - [**Introduction to Econometrics with R**](https://www.econometrics-with-r.org/) : assez complet, sauf sur le plus récent évidemment.
 - [**Big Book of R**](https://www.bigbookofr.com/) : collection de livres (numériques) publiés sur R, on y trouve souvent son bonheur.
 
-## Institutions :
+## Institutions
 
 - [**R Foundation** et **R Core Team**](https://www.r-project.org/)
 - [**r-lib**](https://r-lib.org/) : organisation à l'origine de nombreux packages fondamentaux de l'écosystème moderne R.
