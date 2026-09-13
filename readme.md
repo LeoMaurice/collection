@@ -369,5 +369,12 @@ Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains o
 - [**{shinylive}**](https://posit-dev.github.io/r-shinylive/) : exporte des applications `{shiny}` autonomes fonctionnant entièrement dans le navigateur grâce à `{webR}`, sans serveur Shiny.
 - [**Extension Quarto `shinylive`**](https://quarto-ext.github.io/shinylive/) : permet d'intégrer des applications Shiny exécutées dans le navigateur à des documents et présentations Quarto.
 
+### Jupyter
+
+- `jupyter` peut aussi travailler avec **Pandoc** et **Quarto**.
+- [**JupyterLite**](https://jupyterlite.readthedocs.io/) : distribution de JupyterLab s'exécutant entièrement dans le navigateur grâce à des kernels compilés en `WebAssembly`, notamment Pyodide et Xeus.
+- [**JupyterLite Xeus**](https://github.com/jupyterlite/xeus-lite) : extension permettant d'utiliser des kernels Xeus dans JupyterLite, notamment `xeus-python` et `xeus-r`, sans serveur distant.
+
+
 ## Miscellaneous
 - [**{reticulate}**](https://rstudio.github.io/reticulate/) : interface R à Python.
