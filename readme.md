@@ -493,5 +493,7 @@ S3 est informel. S4 a une définition formelle, mais avec des lourdeurs. S7 est 
 - on peut dire que la classe est abstraite avec l'argument `abstract`.
 - l'argument `package` de `new_class` est défini automatique si est on est dans un package. Dans ce cas, le constructeur doit être exporté.
 - `super()` permet d'expliciter les appelles à des méthodes des parents (comme en java, il me semble ?).
+- pas d'héritage multiple au contraire de S4 pour garder les choses efficaces.
+- S7 a fait le choix d'accepter l'accès direct par `@` au contraire de S4 : les propriétés sont donc directement mutables, contre une part de la philosophie de R.
 
 ### R6
