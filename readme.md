@@ -492,5 +492,6 @@ S3 est informel. S4 a une définition formelle, mais avec des lourdeurs. S7 est 
 - on peut définir un validateur avec l'argument `validator` de `new_class` : la fonction doit commencer par `self` qui est l'objet à valider.
 - on peut dire que la classe est abstraite avec l'argument `abstract`.
 - l'argument `package` de `new_class` est défini automatique si est on est dans un package. Dans ce cas, le constructeur doit être exporté.
+- `super()` permet d'expliciter les appelles à des méthodes des parents (comme en java, il me semble ?).
 
 ### R6
