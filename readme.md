@@ -7,15 +7,25 @@
 - [**R Graph Gallery**](https://r-graph-gallery.com/) : collection de graphiques en R pour s'inspirer.
 - [**R Universe**](https://r-universe.dev/search) : collection des univers de packages R.
 - [**R OpenGov**](https://ropengov.org/) : packages gouvernementaux d'accès aux données.
+- [**Ressources shiny de ThinkR**](https://connect.thinkr.fr/connect/#/welcome)
+- [**Présentation des grands packages et fonctions sous forme de dessin !**](https://allisonhorst.com/r-packages-functions) par Allison Horst.
 
-## Livres
+## Livres programmation en R
 
-- [**Advanced R**](https://adv-r.hadley.nz/) : le livre de référence si on veut comprendre les possibilités de par Hadley. La partie *object-oriented programming* et *meta-programming* sont particulièrement utiles.
-- [**R for data science**](https://r4ds.hadley.nz/)
-- [**R Packages**](https://r-pkgs.org/) : essentiel pour apprendre à écrire un package en R, avec l'ensemble des bonnes pratiques.
+- [**R for data science**](https://r4ds.hadley.nz/) : excellent livre d'entrée pour des statisticiens par **Hadley Wickham**.
+- [**Advanced R**](https://adv-r.hadley.nz/) : le livre de référence si on veut comprendre les possibilités de par **Hadley Wickham**. La partie *object-oriented programming* et *meta-programming* sont particulièrement utiles.
+- [**R Packages**](https://r-pkgs.org/) : essentiel pour apprendre à écrire un package en R, avec l'ensemble des bonnes pratiques par **Hadley Wickham**.
 - [**What they forgot to teach you about R**](https://rstats.wtf/) : un titre pompeux ou ironique mais beaucoup de très bons conseils sur la gestion d'un projet R. En cours.
 - [**Introduction to Econometrics with R**](https://www.econometrics-with-r.org/) : assez complet, sauf sur le plus récent évidemment.
+- [**Text Mining with R**](https://www.tidytextmining.com/) : O'Reilly book.
+- [**Text Mining for Social Scientists**](https://bookdown.org/f_lennert/text-mining-book/) : par **Félix Lennert**, sociologue au **Crest**.
+- [**Engineering Production-Grade Shiny Apps**](https://engineering-shiny.org/) : par **ThinkR**, excellent même pour des applications de moindre ampleur : bonnes pratiques, optimisations etc.
 - [**Big Book of R**](https://www.bigbookofr.com/) : collection de livres (numériques) publiés sur R, on y trouve souvent son bonheur.
+
+## Livres méthodes
+
+- [**Text as Data**](https://web.stanford.edu/~gentzkow/research/text-as-data.pdf) : livre de référence sur les méthodes mobilisées en analyse textuel.
+- [**Mostly harmless econometrics**](www.mostlyharmlesseconometrics.com/) : livre d'introduction de référence à l'économétrie moderne.
 
 ## Institutions
 
@@ -23,12 +33,16 @@
 - [**r-lib**](https://r-lib.org/) : organisation à l'origine de nombreux packages fondamentaux de l'écosystème moderne R.
 - [**posit**](https://posit.co/) compagnie derrière RStudio, Positron. Soutien les développements de beaucoup d'aspects devenus essentiels de R comme `{tidyverse}`, `{ggplot2}`, `{shiny}`, `{quarto}` et beaucoup d'autres choses. Voir aussi [Hadley Wickham](https://hadley.nz/).
 - [**ROpenSci**](https://ropensci.org/) : soutien le développement de certains packages, surtout à but scientifique.
-
+- **Entreprises d'accompagnement et de formation en R** :
+ - [**Ardata**](https://www.ardata.fr/) : derrière notamment `{ggiraph}`, `{rvg}`, `{flextable}` `{officer}`, maintenus par [David Gohel](https://github.com/davidgohel/rvg/commits?author=davidgohel).
+ - [**ThinkR**](https://thinkr.fr/) : derrière notamment `{golem}`.
+- Autres entreprises de l'environnement *data science* :
+ - [**QuantStack**](https://quantstack.net/) : derrière [`jupyter`](https://jupyter.org/) et [`emscripten`](https://emscripten.org/) en autres.
 
 ## Pour les anciens utilisateurs de SAS :
-- Des ressources dans {**utilitR**}
+- Des ressources dans {**utilitR**}.
 - [**Aide-mémoire SAS → R**](https://nassab-abdallah.github.io/aide_memoire_r_sas/)
-- [**Learning R as a SAS User**](https://hutchdatascience.org/data_snacks/r_snacks/sas2r.html) : guide de transition SAS → R en anglais
+- [**Learning R as a SAS User**](https://hutchdatascience.org/data_snacks/r_snacks/sas2r.html) : guide de transition SAS → R en anglais.
 - [**{procs}**](https://procs.r-sassy.org/articles/procs.html) reproduit de nombreuses procédures SAS (`freq`, `means`, `report`, etc.). Il fait partie de l'écosystème [**{sassy}**](https://sassy.r-sassy.org/), conçu pour faciliter la transition SAS → R.
 - [**{tidylog}**](https://github.com/elbersb/tidylog) : log l'ensemble des opérations `{dplyr}` et `{tidyr}` pour simuler le comportement de SAS avec le `{tidyverse}`.
 
@@ -44,7 +58,7 @@
 
 - [**{dplyr}**](https://dplyr.tidyverse.org/) : manipulation de données : filtrage, sélection, création de variables, agrégation et jointures.
 - [**{tidyr}**](https://tidyr.tidyverse.org/) : mise en forme et restructuration des données, notamment avec `pivot_longer()` et `pivot_wider()`.
-- [**{stringr}**](https://stringr.tidyverse.org/) : manipulation, recherche, extraction et remplacement dans les chaînes de caractères.
+- [**{stringr}**](https://stringr.tidyverse.org/) : manipulation, recherche, extraction et remplacement dans les chaînes de caractères. Basé sur [**{stringi}**](https://stringi.gagolewski.com/). 
 - [**{forcats}**](https://forcats.tidyverse.org/) : manipulation des variables qualitatives (`factor`), notamment le réordonnancement et le regroupement des modalités.
 - [**{lubridate}**](https://lubridate.tidyverse.org/) : création, manipulation, comparaison et extraction d’informations à partir de dates et d’heures.
 - [**{purrr}**](https://purrr.tidyverse.org/) : programmation fonctionnelle et application de fonctions à des vecteurs, listes ou colonnes de données.
@@ -53,20 +67,20 @@
 
 ## Manipulation de données, hors {tidyverse}
 
+- [**{skimr}**](https://docs.ropensci.org/skimr/) : génère un excellent rapport d'introduction.
 - [**{janitor}**](https://sfirke.github.io/janitor/) : nettoyage rapide des données (`clean_names()`, tableaux de fréquences, etc.).
 - [**{clock}**](https://clock.r-lib.org/) : manipulation avancée et dates, heures, calendriers et fuseaux horaires.
 - [**{pointblanck}**](https://rstudio.github.io/pointblank/) : validation et contrôle qualité des données dans les pipelines de traitement.
-- [**{skimr}**](https://docs.ropensci.org/skimr/) : génère un excellent rapport d'introduction.
+- [**{stringx}**](https://stringx.gagolewski.com/) est un autre wrapper de `{stringi}` en remplaçant les fonctions de R base.
 
 ## Import / export
 
-Pour stocker des données temporaires ou à usage interne, il est conseillé d'utiliser `saveRDS()` et `readRDS()`, qui produisent des fichiers `.rds`.
-
-Un fichier `.rds` correspond à un objet R unique (généralement un tableau de données, mais n'importe quel objet R peut devenir un `.rds`). Il est généralement préférable aux fichiers `.RData` produits par `save()` et relus avec `load()`.
+Pour stocker des données temporaires ou à usage interne, il est conseillé d'utiliser `saveRDS()` et `readRDS()`, qui produisent des fichiers `.rds`. Préférable aux fichiers `.RData` produits par `save()` et relus avec `load()`.
 
 - [**{here}**](https://here.r-lib.org/) : facilite l'écriture des adresses.
 - [**{fs}**](https://fs.r-lib.org/) : manipulation moderne et multiplateforme des fichiers et dossiers.
 - [**{readr}**](https://readr.tidyverse.org/) : lecture et écriture des fichiers texte (`csv`, `txt`). `readr::parse_number("1,1", locale = readr::locale(decimal_mark = ","))` : très pratique pour convertir des strings de nombre en numérique, surtout s'ils sont formattés à la française.
+- [**{jsonlite}**](https://jeroen.r-universe.dev/jsonlite) : lecture, écriture et manipulation de données au format JSON.
 - [**{readxl}**](https://readxl.tidyverse.org/) : lecture des fichiers Excel.
 - [**{writexl}**](https://docs.ropensci.org/writexl/) : écriture des fichiers Excel.
 - [**{openxlsx**}](https://joshuasturm.github.io/openxlsx/index.html) : couvre les besoins de xlsx plus complexes (notamment métadonnées). 
@@ -84,6 +98,8 @@ Un fichier `.rds` correspond à un objet R unique (généralement un tableau de 
 - [**{patchwork}**](https://patchwork.data-imaginist.com/) : assemblage de plusieurs graphiques `ggplot2`.
 - [**{scales}**](https://scales.r-lib.org/) : mise en forme des axes, labels, pourcentages, devises et graphiques sous `{ggplot2}`.
 - [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sans collision pour les graphiques `{ggplot2}`.
+- [**{gganimate}**](https://gganimate.com/) : ajout d'animations pour les graphiques `{ggplot2}`.
+- [**{rayshader}**](https://www.rayshader.com/) : produire des graphiques et cartes avec un effet 3D d'ombre.
 - [**{rvg}**](https://davidgohel.github.io/rvg/) : export de graphiques vectoriels éditables dans PowerPoint ou Excel. Très utile avec `{officer}`.
 
 ### Thèmes et palettes pour ggplot2
@@ -93,6 +109,7 @@ Un fichier `.rds` correspond à un objet R unique (généralement un tableau de 
 - [**{paletteer}**](https://emilhvitfeldt.github.io/paletteer/) : interface commune donnant accès à plusieurs milliers de palettes provenant de nombreux packages R. Les fonctions principales sont `paletteer_d()` pour les palettes discrètes, `paletteer_c()` pour les palettes continues et `paletteer_dynamic()` pour les palettes dont le nombre de couleurs peut varier. 
 - [**{ggthemes}**](https://jrnold.github.io/ggthemes/) : très bonne collection de thèmes.
 - [**{ggprism}**](https://csdaw.github.io/ggprism/) : thèmes et palettes inspirés du logiciel *prism*.
+- [**{MetBrewer}**](https://www.blakerobertmills.com/my-work/met-brewer) : palettes inspirés d'oeuvres d'art du *Metropolitan Museum of Art in New York*.
 - [**{colorspace}**](https://colorspace.r-forge.r-project.org/) : création, manipulation et évaluation de palettes de couleurs.
 
 ### Tableaux publiables
@@ -122,6 +139,8 @@ Un fichier `.rds` correspond à un objet R unique (généralement un tableau de 
 - [**{pkgdown}**](https://pkgdown.r-lib.org/) : génération d’un site de documentation pour un package.
 - [**{covr}**](https://covr.r-lib.org/) : mesure de la couverture des tests.
 - [**GitHub Actions**](https://docs.github.com/en/actions) : automatisation des tests et vérifications d’un package.
+- [**{attachment}**](https://thinkr-open.github.io/attachment/) : facilite la synchronisation entre `NAMESPACE` et `DESCRIPTION`.
+- [**Semantic versionning**](https://semver.org/) : proposition de numérotation de version en majeur.mineur.correction. Majeur uniquement pour les changements non rétro compatibles.
 
 ### Benchmarking
 
@@ -156,11 +175,11 @@ En résumé, `{logger}` quand on veut afficher des messages à certaines endroit
 
 ## Calcul sur des données volumineuses
 
-Pour la plupart des usages, **{duckdb}** est
+Pour la plupart des usages, **{duckdb}** est le *go to*.
 
-- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) :  aujourd'hui la solution recommandée : très performant, fonctionne hors mémoire, lit directement les fichiers Parquet et s'intègre parfaitement avec l'écosystème `{tidyverse}` avec `{dplyr}`.
+- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) :  aujourd'hui la solution recommandée. Très performant, fonctionne hors mémoire, lit directement les fichiers Parquet et s'intègre parfaitement avec l'écosystème `{tidyverse}` avec `{dplyr}`. Peux même faire des régressions simples.
 - [**{futurize}**](https://futurize.futureverse.org/) : goto pour la parallélisation. Permet de très simplement rendre les fonctions parallélisables grâce au [**{futureverse}**](https://www.futureverse.org/). Supporte de nombreuses fonctions comme `lapply()`, `purrr::map()`, ou `foreach::foreach()`.
-- [**{sparklyr}**](https://spark.posit.co/) : interface R vers Apache Spark. Permet de distribuer les calculs sur un cluster mais nécessite une infrastructure dédiée. Souvent excessif pour les besoins courants.
+- [**{sparklyr}**](https://spark.posit.co/) : interface R vers Apache Spark. Permet de distribuer les calculs sur un cluster mais nécessite une infrastructure dédiée. Souvent excessif pour les besoins courants mais nécessaire pour de la très grosse volumétrie ou pour des calculs plus complexes.
 - [**{data.table}**](https://r-datatable.com/) : référence historique pour les traitements rapides en mémoire. Extrêmement performant mais ne permet pas nativement de travailler sur des données plus grandes que la mémoire disponible. Beaucoup moins verbeux que le `{tidyverse}`, petit coût d'entrée, pour cela je ne préfère pas.
 - [**{polars}**](https://pola-rs.github.io/r-polars/) : interface R du moteur Polars écrit en Rust. Très performant sur les données volumineuses, avec exécution paresseuse (*lazy evaluation*) et traitements pouvant être effectués hors mémoire. Concurrent direct de l'association `{duckdb}` + `{arrow}`. Défaut similaire à `{data.table}` : très éloigné de la formulation `{tidyverse}`, reste plus verbeux. Avantage : uniformité de l'écriture ET du traitement en mémoire et hors mémoire.
 
@@ -177,12 +196,10 @@ Pour la plupart des usages, **{duckdb}** est
 
 - **Exploration** :
   - [**{mapview}**](https://r-spatial.github.io/mapview/) : exploration rapide et interactive de données spatiales.
-
 - **Cartographie statiques** :
   - [**{tmap}**](https://r-tmap.github.io/tmap/) : création de cartes statistiques, statiques ou interactives. Inspiré aussi de la grammar of graphics.
   - [**{ggplot2}**](https://ggplot2.tidyverse.org/) : création de graphiques et de cartes statistiques avec `geom_sf()`. A utilisé surtout si on veut travailler avec d'autres graphiques `{ggplot2}` sinon `{tmap}` est plus efficace.
   - [**{ggspatial}**](https://paleolimbot.github.io/ggspatial/) : ajout d’éléments cartographiques aux graphiques `{ggplot2}`.
-
 - **Cartographie interactives** :
   - [**{leaflet}**](https://rstudio.github.io/leaflet/) : création de cartes interactives.
 
@@ -197,6 +214,8 @@ glm(y ~ x1 + x2, family = binomial(), data = base) # Logit
 ```
 
 `{stats}` est bien complété par [**{car}**](https://cran.r-project.org/package=car) : diagnostic statistique, analyses de variance et calcul d'indicateurs comme le VIF.
+
+Remarque toute personnelle : je suis toujours aussi étonné quand dehors des packages "infrastructurels" comme `{easystats}` et `{tidymodels}`, la documentation des packages de modèles est souvent limité à celle de base sur CRAN/bioconductor.
 
 ### Présenter et interpréter les résultats
 
@@ -255,18 +274,60 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
 ### Machine learning
 
 - [**{kknn}**](https://cran.r-project.org/package=kknn) : méthode des k plus proches voisins (KNN).
-- [**{kernlab}**](https://cran.r-project.org/package=kernlab) : machines à vecteurs de support (SVM), notamment avec noyau radial.
+- [**{kernlab}**](https://cran.r-project.org/package=kernlab) : machines à vecteurs de support (SVM).
 - [**{rpart}**](https://cran.r-project.org/package=rpart) : arbres de décision.
 - [**{ranger}**](https://cran.r-project.org/package=ranger) : forêts aléatoires rapides.
 - [**{xgboost}**](https://xgboost.readthedocs.io/) : gradient boosting, particulièrement performant sur les données tabulaires.
 - [**{brulee}**](https://cran.r-project.org/package=brulee) : réseaux de neurones entraînés dans l'écosystème `{tidymodels}`.
+
+### Analyse textuelle
+
+- [**{tidytext}**](https://juliasilge.github.io/tidytext/) : opérations sur des `tibble` en respectant les principes *tidy*. Quelques analyses simples (statistiques descriptives notamment **tf-idf**, **n-grams**). Convertions vers ou depuis les autres formats qui sont des formes de [*document-term matrix*](https://en.wikipedia.org/wiki/Document-term_matrix).
+- [**{stopwords}**](https://github.com/quanteda/stopwords) : *go to* listes de mots à supprimer des analyses. Package *standalone* du projet `{quanteda}`.
+- [**{spacyr}**](https://spacyr.quanteda.io/articles/using_spacyr.html) : wrapper R pour le package Python [**spaCy**](https://spacy.io/) avec `{reticulate}`, package de référence pour tokenisation, lemmatisation etc. Package *standalone* du projet `{quanteda}`.
+- [**{quanteda}**](https://quanteda.io/) :  package de référence pour l'analyse textuelle (gestion de corpus, tokenisation, matrice de fréquence etc.), qui fonctionne avec des objets `dfm`, accompagné de son petit univers :
+ - [**{quanteda.textmodels}**](https://github.com/quanteda/quanteda.textmodels) : aussi bien *LDA* que jusqu'à *CNN*.
+ - [**{quanteda.textstats}**](https://github.com/quanteda/quanteda.textstats)
+ - [**{quanteda.textplots}**](https://github.com/quanteda/quanteda.textplots)
+ - [**{quanteda.tidy}**](https://github.com/quanteda/quanteda.tidy) : verbes similaires à `{dplyr}` pour les objets `dfm` de`{quanteda}`, sans convertion en `tibble` à l'inverse de `{tidytext}`.
+- Pacakges codéveloppés sous le nom de *R language Analysis Suite*, plus récents :
+ - - [**{topics}**](https://www.r-topics.org/) : centré sur l'analyse de fréquence, de *n-gram*, de *LDA*.
+   - [**{text}**](https://www.r-text.org/) : pour l'accès aux modèles de *LLM* sur [*HuggingFace*](https://huggingface.co/).
+   - [**{talk}**](https://www.r-talk.org/) : pour la transcription automatique parole à texte, au travers de `whisper` sur [*HuggingFace*](https://huggingface.co/).
+- [**{topicmodels}**](https://cran.r-project.org/web/packages/topicmodels/index.html) : implémentation de *Latent Dirichlet allocation* (LDA). Beaucoup d'autres packages avec des modèles spécifiques comme [**{stm}**](https://www.structuraltopicmodel.com/).
+- [**{text2vec}**](https://text2vec.org/) : *embeddings*, *NLP* vectoriel pre-LLM/`bert`/*Attention is all you need*.
+- [**{tm}**](https://cran.r-project.org/web/packages/tm/index.html) : pour *Text Mining Infrastructure in R*, *legacy* package pour les objets `Corpus` et `DocumentTermMatrix`.
+
+
+Ma préférence est d'utiliser `{tidytext}` en amont pour les analyses descriptives et fréquentielles, puis de revenir à des données tidy en aval pour préparer les visualisations avec `{ggplot2}`. Les résultats peuvent être organisés dans les tableaux compatibles avec `{dplyr}`.
+
+Pour les analyses de fréquence, les n-grams et les modèles thématiques classiques comme la LDA, une chaîne entièrement en R fonctionne très bien. Pour les analyses fondées sur des modèles préentraînés, des *embeddings* modernes ou des *LLM*, il peut être préférable d'utiliser directement l'écosystème Python, puis de revenir à R pour les régressions, les tableaux et les graphiques.
+
+Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains outils Python accessibles depuis R. Cette solution peut être pratique, mais elle conserve une partie des contraintes de l'environnement Python — notamment la gestion des dépendances, de `{reticulate}`, de `conda` et des versions des modèles.
+
+## Dataviz
+
+### Graphiques interactifs
+
+- [**{ggiraph}**](https://davidgohel.github.io/ggiraph/) : rend les graphiques `{ggplot2}` interactifs. Permet les choses les plus simples : infobulles, survol, sélection de données. Très léger, simplement génère des SVG.
+- [**{ggiraphExtra}**](https://github.com/cardiomoon/ggiraphExtra) : fonctions supplémentaires pour `{ggiraph}`.
+- [**{echarts4r}**](https://echarts4r.john-coene.com/) : interface R pour Apache ECharts.
+- [**{plotly}**](https://plotly-r.com/) : création de graphiques interactifs. `ggplotly()` convertit un graphique `{ggplot2}`. N'est plus directement supporté par l'équipe de `plotly.js` qui se concentre sur la librairie js en elle-même et son wrapper python. Posit finance encore son développement mais potentiellement une certaine différence entre `plotly.js` et `{plotly}`. La fonction `ggplotly()` convertit un graphique `{ggplot2}` en `plotly.js` mais trop lent à mon goût.
+- [**{highcharter}**](https://jkunst.com/highcharter/) : interface R pour Highcharts. **Attention license commerciale de Highcharts**.
+
+### Tableaux interactifs et tableaux de synthèse
+
+- [**{DT}**](https://rstudio.github.io/DT/) : tableaux interactifs avec recherche, tri, filtres et pagination.
+- [**{reactable}**](https://glin.github.io/reactable/) : tableaux interactifs modernes et personnalisables.
+- [**{formattable}**](https://renkun-ken.github.io/formattable/) : tableaux HTML avec mise en forme conditionnelle.
+- [**{flextable}**](https://davidgohel.github.io/flextable/) : tableaux mis en forme, exportables vers Word, PowerPoint, HTML et PDF.
+- [**{reactablefmtr}**](https://kcuilla.github.io/reactablefmtr/) : fonctions de mise en forme pour `{reactable}`.
 
 ## Création de sites internet et d'applications
 
 - [**{rsconnect}**](https://rstudio.github.io/rsconnect/) : déploiement d’applications Shiny, de documents Quarto ou R Markdown et de rapports sur shinyapps.io ou Posit Connect.
 - [**{httr2}**](https://httr2.r-lib.org/) : interface moderne avec des API web, télécharger des ressources et gérer l'authentification.
 - [**{plumber}**](https://www.rplumber.io/articles/introduction.html) : rendre R disponible par des APIs.
-- [**{jsonlite}**](https://jeroen.r-universe.dev/jsonlite) : lecture, écriture et manipulation de données au format JSON.
 
 ### [**{Shiny}**](https://shiny.posit.co/r/)
 
@@ -287,8 +348,13 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
   - [**{colourpicker}**](https://github.com/daattali/colourpicker) : ajout de sélecteurs de couleurs dans les applications Shiny et les graphiques.
   - [**{timevis}**](https://github.com/daattali/timevis) : création de frises chronologiques interactives en R et dans Shiny.
 - [**{waiter}**](https://waiter.john-coene.com/#/) : création d’écrans de chargement, de spinners et de barres de progression plus complexes que ceux proposés par `{shinycssloaders}`. `autoWaiter()` et `waiterPreloader()` sont notamment utiles.
+- Outils avancés :
+  - [**{golem}**](https://thinkr-open.github.io/golem/) : framework pour développer des app `{shiny}` comme on developperait un package. Excellent pour des applications d'ampleur ou qui doivent être particulièrement solide.
+  - [**{gargoyle}**](https://github.com/ColinFay/gargoyle) : créer des évènements/signaux pour des app `{shiny}`. Peu mis à jour. Uniquement si beaucoup trop de réactivité et pas de façon de le résoudre avec les outils usuels.
 
-### [**Quarto**](https://quarto.org/)
+### [**Quarto**](https://quarto.org/) pour l'édition de site statique ou en `webR`
+
+[**Quarto**](https://quarto.org/) est un outils pour éditer des documents ou site internet dans le même mouvement que l'analyse de données. A des similarités et des différences avec `jupyter`.
 
 - [**{quarto}**](https://github.com/quarto-dev/quarto-r) : interface R pour utiliser Quarto depuis R et RStudio.
 - [**Pandoc**](https://pandoc.org/) : convertisseur universel de documents utilisé par Quarto pour transformer des fichiers Markdown en HTML, PDF, Word, présentations et de nombreux autres formats.
@@ -297,21 +363,11 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
 - [**{htmltools}**](https://rstudio.github.io/htmltools/) : création et manipulation de composants HTML depuis R.
 - [**{htmlwidgets}**](https://www.htmlwidgets.org/) : intégration de visualisations JavaScript interactives dans des documents Quarto.
 
+### R en `WebAssembly` pour une exécution directement dans le navigateur
 
-## Dataviz
+- [**{webR}**](https://docs.r-wasm.org/webr/latest/) : distribution de R compilée en `WebAssembly`, permettant d'exécuter du code R dans le navigateur, sans installation locale ni serveur R distant.
+- [**{shinylive}**](https://posit-dev.github.io/r-shinylive/) : exporte des applications `{shiny}` autonomes fonctionnant entièrement dans le navigateur grâce à `{webR}`, sans serveur Shiny.
+- [**Extension Quarto `shinylive`**](https://quarto-ext.github.io/shinylive/) : permet d'intégrer des applications Shiny exécutées dans le navigateur à des documents et présentations Quarto.
 
-### Graphiques interactifs
-
-- [**{ggiraph}**](https://davidgohel.github.io/ggiraph/) : rend les graphiques `{ggplot2}` interactifs. Permet les choses les plus simples : infobulles, survol, sélection de données. Très léger, simplement génère des SVG.
-- [**{ggiraphExtra}**](https://github.com/cardiomoon/ggiraphExtra) : fonctions supplémentaires pour `{ggiraph}`.
-- [**{echarts4r}**](https://echarts4r.john-coene.com/) : interface R pour Apache ECharts.
-- [**{plotly}**](https://plotly-r.com/) : création de graphiques interactifs. `ggplotly()` convertit un graphique `{ggplot2}`. N'est plus directement supporté par l'équipe de `plotly.js` qui se concentre sur la librairie js en elle-même et son wrapper python. Posit finance encore son développement mais potentiellement une certaine différence entre `plotly.js` et `{plotly}`. La fonction `ggplotly()` convertit un graphique `{ggplot2}` en `plotly.js` mais trop lent à mon goût.
-- [**{highcharter}**](https://jkunst.com/highcharter/) : interface R pour Highcharts. **Attention license commerciale de Highcharts**.
-
-### Tableaux interactifs et tableaux de synthèse
-
-- [**{DT}**](https://rstudio.github.io/DT/) : tableaux interactifs avec recherche, tri, filtres et pagination.
-- [**{reactable}**](https://glin.github.io/reactable/) : tableaux interactifs modernes et personnalisables.
-- [**{formattable}**](https://renkun-ken.github.io/formattable/) : tableaux HTML avec mise en forme conditionnelle.
-- [**{flextable}**](https://davidgohel.github.io/flextable/) : tableaux mis en forme, exportables vers Word, PowerPoint, HTML et PDF.
-- [**{reactablefmtr}**](https://kcuilla.github.io/reactablefmtr/) : fonctions de mise en forme pour `{reactable}`.
+## Miscellaneous
+- [**{reticulate}**](https://rstudio.github.io/reticulate/) : interface R à Python.
