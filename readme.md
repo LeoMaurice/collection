@@ -30,7 +30,7 @@
 - [**Aide-mémoire SAS → R**](https://nassab-abdallah.github.io/aide_memoire_r_sas/)
 - [**Learning R as a SAS User**](https://hutchdatascience.org/data_snacks/r_snacks/sas2r.html) : guide de transition SAS → R en anglais
 - [**{procs}**](https://procs.r-sassy.org/articles/procs.html) reproduit de nombreuses procédures SAS (`freq`, `means`, `report`, etc.). Il fait partie de l'écosystème [**{sassy}**](https://sassy.r-sassy.org/), conçu pour faciliter la transition SAS → R.
-- [**{logrittr}**](https://github.com/GuillaumePressiat/logrittr/) : permet d'avoir des logs similaires à SAS où chaque transformation génère des messages, avec le pipe `%>%` ou `%>=%`.
+- [**{tidylog}**](https://github.com/elbersb/tidylog) : log l'ensemble des opérations `{dplyr}` et `{tidyr}` pour simuler le comportement de SAS avec le `{tidyverse}`.
 
 ## Gestion des projets, outils minimaux
 
@@ -128,12 +128,15 @@ Un fichier `.rds` correspond à un objet R unique (généralement un tableau de 
 - [**{bench}**](https://bench.r-lib.org/) : mesure et comparaison des performances d'exécution du code R.
 - [**{profvis}**](https://rstudio.github.io/profvis/) : profilage du code afin d'identifier les parties les plus coûteuses en temps de calcul.
 
-### Logging
+### Journalisation / logging
 
-- [**{loggittr}**](https://guillaumepressiat.github.io/logrittr/) : ajoute un pipe qui crée un log pour ce pipe. Ce pipe peut remplacer le pipe `%>%` avec `logrittr_activate()`. Je préfère ce package à `{tidylog}` : on peut choisir ou non de log toutes les opérations, on peut avoir des logs même quand on n'utilise pas les fonctions `{dplyr}` mais qu'on utilise quand même le pipe, reste compatible avec une écriture *package* où le namespace est précisé. Incompatible avec le pipe de base R. Défaut : ne fonctionne que avec des fonctions `{dplyr}` ou base R sur des `data.frame`. Moins de fonctionnalité que `{lumberjack}`.
 - [**{logger}**](https://daroczig.github.io/logger/) : créer des logs avec différents niveaux. Simple, léger, efficace. Bonne gestion des niveaux.
+- [**{loggittr}**](https://guillaumepressiat.github.io/logrittr/) : ajoute un pipe `%>=%` qui crée un log pour ce pipe. Ce pipe peut remplacer le pipe `%>%` avec `logrittr_activate()`. Similaire à `{lumberjack}`. 
+- [**{tidylog}**](https://github.com/elbersb/tidylog) : log l'ensemble des opérations `{dplyr}` et `{tidyr}`.
 
-En résumé, `{logger}` quand on veut afficher des messages à certaines endroits précis (app shiny par exemple), `{loggittr}` si on veut log toutes les opérations classiques du `{tidyverse}` ou calquer à l'idée du pipe. 
+ `{loggittr}` et `{tidylog}` ne fonctionne qu'avec des fonctions `{dplyr}` ou base R sur des `data.frame`.
+
+En résumé, `{logger}` quand on veut afficher des messages à certaines endroits précis (app shiny par exemple), `{loggittr}` ou `{tidylog}` si on veut log toutes les opérations classiques du `{tidyverse}`, le choix entre les deux se faisant selon l'exhaustivité voulue du logging. 
 
 ### Qualité du code
 
