@@ -1,6 +1,8 @@
 # Essentiels pour R
 
-## Ressources utiles
+## Ecosystème
+
+### Ressources utiles
 
 - [**{utilitR}**](https://utilitr.org/) : réalisé par l'Insee. Très bon tutoriel.
 - [**Newslett'R**](https://leoniefvr.github.io/Newslett-R/) : mis en place à la Drees avec une introduction à R, des exercices, très bien pour débuter.
@@ -10,7 +12,7 @@
 - [**Ressources shiny de ThinkR**](https://connect.thinkr.fr/connect/#/welcome)
 - [**Présentation des grands packages et fonctions sous forme de dessin !**](https://allisonhorst.com/r-packages-functions) par Allison Horst.
 
-## Livres programmation en R
+### Livres programmation en R
 
 - [**R for data science**](https://r4ds.hadley.nz/) : excellent livre d'entrée pour des statisticiens par **Hadley Wickham**.
 - [**Advanced R**](https://adv-r.hadley.nz/) : le livre de référence si on veut comprendre les possibilités de par **Hadley Wickham**. La partie *object-oriented programming* et *meta-programming* sont particulièrement utiles.
@@ -22,14 +24,14 @@
 - [**Engineering Production-Grade Shiny Apps**](https://engineering-shiny.org/) : par **ThinkR**, excellent même pour des applications de moindre ampleur : bonnes pratiques, optimisations etc.
 - [**Big Book of R**](https://www.bigbookofr.com/) : collection de livres (numériques) publiés sur R, on y trouve souvent son bonheur.
 
-## Livres méthodes
+### Livres méthodes
 
 - [**Text as Data**](https://web.stanford.edu/~gentzkow/research/text-as-data.pdf) : livre de référence sur les méthodes mobilisées en analyse textuel.
 - [**Mostly harmless econometrics**](www.mostlyharmlesseconometrics.com/) : livre d'introduction de référence à l'économétrie moderne.
 
-## Institutions
+### Institutions
 
-- [**R Foundation** et **R Core Team**](https://www.r-project.org/)
+- [**R Foundation** et **R Core Team**](https://www.r-project.org/) et [**R Consortium**](https://r-consortium.org/).
 - [**r-lib**](https://r-lib.org/) : organisation à l'origine de nombreux packages fondamentaux de l'écosystème moderne R.
 - [**posit**](https://posit.co/) compagnie derrière RStudio, Positron. Soutien les développements de beaucoup d'aspects devenus essentiels de R comme `{tidyverse}`, `{ggplot2}`, `{shiny}`, `{quarto}` et beaucoup d'autres choses. Voir aussi [Hadley Wickham](https://hadley.nz/).
 - [**ROpenSci**](https://ropensci.org/) : soutien le développement de certains packages, surtout à but scientifique.
@@ -38,6 +40,11 @@
  - [**ThinkR**](https://thinkr.fr/) : derrière notamment `{golem}`.
 - Autres entreprises de l'environnement *data science* :
  - [**QuantStack**](https://quantstack.net/) : derrière [`jupyter`](https://jupyter.org/) et [`emscripten`](https://emscripten.org/) en autres.
+
+### Journaux
+
+- [**R Journal**](https://journal.r-project.org/index.html) : mené par le *R Foundation*.
+- [**Journal of Open Source Software**](https://joss.theoj.org/) : beaucoup des grands packages y sont présentés.
 
 ## Pour les anciens utilisateurs de SAS :
 - Des ressources dans {**utilitR**}.
@@ -105,7 +112,7 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 ### Thèmes et palettes pour ggplot2
 
 - [**R Graph Gallery – Color palettes**](https://r-graph-gallery.com/color-palette-finder) : outil interactif pour explorer et choisir des palettes.
-- [**R Color Palettes**](https://github.com/EmilHvitfeldt/r-color-palettes) : Repo qui regroupe et compare des packages de palettes. Propose son [**outils de choix de palettes**](https://emilhvitfeldt.github.io/r-color-palettes/).
+- [**R Color Palettes**](https://github.com/EmilHvitfeldt/r-color-palettes) : Repo qui regroupe et compare des packages de palettes. Propose son [**outils de choix de palettes**](https://emilhvitfeldt.github.io/r-color-palettes/).https://r-consortium.org/
 - [**{paletteer}**](https://emilhvitfeldt.github.io/paletteer/) : interface commune donnant accès à plusieurs milliers de palettes provenant de nombreux packages R. Les fonctions principales sont `paletteer_d()` pour les palettes discrètes, `paletteer_c()` pour les palettes continues et `paletteer_dynamic()` pour les palettes dont le nombre de couleurs peut varier. 
 - [**{ggthemes}**](https://jrnold.github.io/ggthemes/) : très bonne collection de thèmes.
 - [**{ggprism}**](https://csdaw.github.io/ggprism/) : thèmes et palettes inspirés du logiciel *prism*.
@@ -127,7 +134,7 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 - [**{lifecycle}**](https://lifecycle.r-lib.org/) : gestion des fonctions expérimentales, obsolètes ou dépréciées.
 - [**{withr}**](https://withr.r-lib.org/) : modification temporaire des options, variables d’environnement et répertoires de travail.
 - [**{memoise}**](https://memoise.r-lib.org/) : mise en cache des résultats de fonctions.
-- [**{groundhog}**](https://groundhogr.com/) : reproduction d’environnements en fixant les versions des packages utilisés.
+- [**{groundhog}**](https://groundhogr.com/) : reproduction d’environnements en fixant les versions dehttps://r-consortium.org/s packages utilisés.
 
 
 ### Développement de packages
@@ -141,6 +148,15 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 - [**GitHub Actions**](https://docs.github.com/en/actions) : automatisation des tests et vérifications d’un package.
 - [**{attachment}**](https://thinkr-open.github.io/attachment/) : facilite la synchronisation entre `NAMESPACE` et `DESCRIPTION`.
 - [**Semantic versionning**](https://semver.org/) : proposition de numérotation de version en majeur.mineur.correction. Majeur uniquement pour les changements non rétro compatibles.
+
+### Programmation orientée objet
+
+- [**{R6}**](https://r6.r-lib.org/) : système de classes encapsulées et mutables, avec héritage, méthodes publiques et privées.
+- [**{S7}**](https://rconsortium.github.io/S7/) : système de classes moderne visant à combiner la simplicité de S3 avec la rigueur de S4.
+- [**{vctrs}**](https://vctrs.r-lib.org/) : outils pour créer des classes vectorielles S3 robustes et cohérentes avec l'écosystème tidyverse.
+- **S3/S4** : systèmes d'objets historiques intégrés à R ; S3 privilégie la simplicité, tandis que S4 fournit des classes, méthodes et validations formelles.
+- [**{methods}**](https://stat.ethz.ch/R-manual/R-devel/library/methods/html/methods-package.html) : package de base fournissant l'infrastructure S4 et les classes de référence de R.
+
 
 ### Benchmarking
 
