@@ -6,7 +6,6 @@
 - [**Newslett'R**](https://leoniefvr.github.io/Newslett-R/) : mis en place à la Drees avec une introduction à R, des exercices, très bien pour débuter.
 - [**R Graph Gallery**](https://r-graph-gallery.com/) : collection de graphiques en R pour s'inspirer.
 - [**R Universe**](https://r-universe.dev/search) : collection des univers de packages R.
-- [**ROpenSci**](https://ropensci.org/) : 
 - [**R OpenGov**](https://ropengov.org/) : packages gouvernementaux d'accès aux données.
 
 ## Livres
@@ -15,8 +14,15 @@
 - [**R for data science**](https://r4ds.hadley.nz/)
 - [**R Packages**](https://r-pkgs.org/) : essentiel pour apprendre à écrire un package en R, avec l'ensemble des bonnes pratiques.
 - [**What they forgot to teach you about R**](https://rstats.wtf/) : un titre pompeux ou ironique mais beaucoup de très bons conseils sur la gestion d'un projet R. En cours.
+- [**Introduction to Econometrics with R**](https://www.econometrics-with-r.org/) : assez complet, sauf sur le plus récent évidemment.
 - [**Big Book of R**](https://www.bigbookofr.com/) : collection de livres (numériques) publiés sur R, on y trouve souvent son bonheur.
-- [**Introduction to Econometrics with R**](https://www.econometrics-with-r.org/)
+
+## Institutions :
+
+- [**R Foundation** et **R Core Team**](https://www.r-project.org/)
+- [**posit**](https://posit.co/) compagnie derrière RStudio, Positron. Soutien les développements de beaucoup d'aspects devenus essentiels de R comme `{tidyverse}`, `{ggplot2}`, `{shiny}`, `{quarto}` et beaucoup d'autres choses. Voir aussi [Hadley Wickham](https://hadley.nz/).
+- [**ROpenSci**](https://ropensci.org/) : soutien le développement de certains packages, surtout à but scientifique.
+
 
 ## Pour les anciens utilisateurs de SAS :
 - Des ressources dans {**utilitR**}
@@ -24,15 +30,21 @@
 - [**Learning R as a SAS User**](https://hutchdatascience.org/data_snacks/r_snacks/sas2r.html) : guide de transition SAS → R en anglais
 - [**{procs}**](https://procs.r-sassy.org/articles/procs.html) reproduit de nombreuses procédures SAS (`freq`, `means`, `report`, etc.). Il fait partie de l'écosystème [**{sassy}**](https://sassy.r-sassy.org/), conçu pour faciliter la transition SAS → R.
 
-## Le [**{tidyverse}**](https://tidyverse.org/)
+## Gestion des projets, outils minimaux
+
+- [**{renv}**](https://rstudio.github.io/renv/) : gestion des environnements et des versions de packages propres à chaque projet.
+- [**{pak}**](https://pak.r-lib.org/) : installation de packages et résolution de leurs dépendances.
+- [**{keyring}**](https://keyring.r-lib.org/) : gestion des secrets.
+- [**{config}**](https://rstudio.github.io/config/) : permet de charger un fichier `config.yml` pour spécifier des adresses, ou des valeurs à utiliser dans l'ensemble d'un projet.
+- [**{targets}**](https://books.ropensci.org/targets/) : créer des pipelines de traitements efficaces.
+
+## La manipulation de données avec le [**{tidyverse}**](https://tidyverse.org/)
 
 - [**{dplyr}**](https://dplyr.tidyverse.org/) : manipulation de données : filtrage, sélection, création de variables, agrégation et jointures.
 - [**{tidyr}**](https://tidyr.tidyverse.org/) : mise en forme et restructuration des données, notamment avec `pivot_longer()` et `pivot_wider()`.
 - [**{stringr}**](https://stringr.tidyverse.org/) : manipulation, recherche, extraction et remplacement dans les chaînes de caractères.
 - [**{forcats}**](https://forcats.tidyverse.org/) : manipulation des variables qualitatives (`factor`), notamment le réordonnancement et le regroupement des modalités.
 - [**{lubridate}**](https://lubridate.tidyverse.org/) : création, manipulation, comparaison et extraction d’informations à partir de dates et d’heures.
-- [**{readr}**](https://readr.tidyverse.org/) : lecture et écriture de fichiers texte, notamment les fichiers CSV et TSV.
-- [**{readxl}**](https://readxl.tidyverse.org/) : lecture de fichiers Excel (`.xls` et `.xlsx`).
 - [**{purrr}**](https://purrr.tidyverse.org/) : programmation fonctionnelle et application de fonctions à des vecteurs, listes ou colonnes de données.
 - [**{tibble}**](https://tibble.tidyverse.org/) : version moderne des `data.frame`, conçue pour être plus lisible et adaptée à la manipulation avec le tidyverse.
 - [**{glue}**](https://glue.tidyverse.org/) : insertion d’expressions R dans des chaînes de caractères.
@@ -40,6 +52,8 @@
 ## Manipulation de données, hors {tidyverse}
 
 - [**{janitor}**](https://sfirke.github.io/janitor/) : nettoyage rapide des données (`clean_names()`, tableaux de fréquences, etc.).
+- [**{clock}**](https://clock.r-lib.org/) : manipulation avancée et dates, heures, calendriers et fuseaux horaires.
+- [**{pointblanck}**](https://rstudio.github.io/pointblank/) : validation et contrôle qualité des données dans les pipelines de traitement.
 
 ## Import / export
 
@@ -50,7 +64,8 @@ Un fichier `.rds` correspond à un objet R unique (généralement un tableau de 
 - [**{readr}**](https://readr.tidyverse.org/) : lecture et écriture des fichiers texte (`csv`, `txt`). `parse_number()` : très pratique pour convertir des strings de nombre en numérique, surtout s'ils sont formattés à la française.
 - [**{readxl}**](https://readxl.tidyverse.org/) : lecture des fichiers Excel.
 - [**{writexl}**](https://docs.ropensci.org/writexl/) : écriture des fichiers Excel.
-- [**{openxlsx**}**](https://joshuasturm.github.io/openxlsx/index.html) : couvre les besoins de xlsx plus complexes (notamment métadonnées).
+- [**{openxlsx**}](https://joshuasturm.github.io/openxlsx/index.html) : couvre les besoins de xlsx plus complexes (notamment métadonnées). 
+- [**{officer}**](https://davidgohel.github.io/officer/) : création et modification de documents Word et PowerPoint.
 - [**{nanoparquet}**](https://nanoparquet.r-lib.org/) : lecture et écriture des fichiers Parquet.
 - [**{qs}**](https://github.com/qsbase/qs) : génère des fichiers sérialisés (comme `saveRDS()` et `readRDS()`) mais plus rapide.
 - [**{here}**](https://here.r-lib.org/) : facilite l'écriture des adresses.
@@ -64,6 +79,111 @@ readr::parse_number(
 )
 ```
 
+## Visualisations
+
+### Graphiques
+
+- [**{ggplot2}**](https://ggplot2.tidyverse.org/) : bibliothèque centrale pour produire la quasi-totalité des graphiques.
+- [**{ggpubr}**](https://rpkgs.datanovia.com/ggpubr/) : simplifie certains usages courants de `ggplot2`.
+- [**{GGally}**](https://ggobi.github.io/ggally/) : matrices de graphiques, corrélations et visualisation exploratoire.
+- [**{patchwork}**](https://patchwork.data-imaginist.com/) : assemblage de plusieurs graphiques `ggplot2`.
+- [**{scales}**](https://scales.r-lib.org/) : mise en forme des axes, labels, pourcentages, devises et graphiques sous `{ggplot2}`.
+- [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sansns les graphiques `{ggplot2}`.
+- [**{rvg}**](https://davidgohel.github.io/rvg/) : export de graphiques vectoriels éditables dans PowerPoint ou Excel. Très utile avec `{officer}`.
+
+### Thèmes et palettes pour ggplot2
+
+- [**R Graph Gallery – Color palettes**](https://r-graph-gallery.com/color-palette-finder) : outil interactif pour explorer et choisir des palettes.
+- [**R Color Palettes**](https://github.com/EmilHvitfeldt/r-color-palettes) : Repo qui regroupe et compare des packages de palettes. Propose son [**outils de choix de palettes**](https://emilhvitfeldt.github.io/r-color-palettes/).
+- [**{paletteer}**](https://emilhvitfeldt.github.io/paletteer/) : interface commune donnant accès à plusieurs milliers de palettes provenant de nombreux packages R. Les fonctions principales sont `paletteer_d()` pour les palettes discrètes, `paletteer_c()` pour les palettes continues et `paletteer_dynamic()` pour les palettes dont le nombre de couleurs peut varier. 
+- [**{ggthemes}**](https://jrnold.github.io/ggthemes/) : très bonne collection de thèmes.
+- [**{ggprism}**](https://csdaw.github.io/ggprism/) : thèmes et palettes inspirés du logiciel *prism*.
+- [**{colorspace}**](https://colorspace.r-forge.r-project.org/) : création, manipulation et évaluation de palettes de couleurs.
+
+### Tableaux publiables
+
+- [**{gt}**](https://gt.rstudio.com/) : création de tableaux de présentation soignés et prêts à publier.
+- [**{gtsummary}**](https://www.danieldsjoberg.com/gtsummary/) : création de tableaux statistiques et de tableaux de synthèse, notamment pour les analyses médicales et épidémiologiques.
+
+## Outils, principalement [**r-lib**](https://github.com/r-lib)
+
+### Programmation avancée
+
+- [**{rlang}**](https://rlang.r-lib.org/) : programmation fonctionnelle et métaprogrammation, notamment les expressions, les environnements et la capture des arguments.
+- [**{vctrs}**](https://vctrs.r-lib.org/) : création de classes vectorielles et définition de leur comportement.
+- [**{cli}**](https://cli.r-lib.org/) : création de messages, avertissements et erreurs lisibles.
+- [**{lifecycle}**](https://lifecycle.r-lib.org/) : gestion des fonctions expérimentales, obsolètes ou dépréciées.
+- [**{withr}**](https://withr.r-lib.org/) : modification temporaire des options, variables d’environnement et répertoires de travail.
+- [**{memoise}**](https://memoise.r-lib.org/) : mise en cache des résultats de fonctions.
+- [**{groundhog}**](https://groundhogr.com/) : reproduction d’environnements en fixant les versions des packages utilisés.
+
+
+### Développement de packages
+
+- [**{usethis}**](https://usethis.r-lib.org/) : création et configuration de packages, gestion de Git, GitHub, tests et documentation.
+- [**{roxygen2}**](https://roxygen2.r-lib.org/) : génération de la documentation et du fichier `NAMESPACE` à partir de commentaires dans le code.
+- [**{testthat}**](https://testthat.r-lib.org/) : écriture et exécution de tests unitaires.
+- [**{devtools}**](https://devtools.r-lib.org/) : développement, documentation, test, vérification et installation de packages.
+- [**{pkgdown}**](https://pkgdown.r-lib.org/) : génération d’un site de documentation pour un package.
+- [**{covr}**](https://covr.r-lib.org/) : mesure de la couverture des tests.
+- [**GitHub Actions**](https://docs.github.com/en/actions) : automatisation des tests et vérifications d’un package.
+
+### Benchmarking
+
+- [**{bench}**](https://bench.r-lib.org/) : mesure et comparaison des performances d'exécution du code R.
+- [**{profvis}**](https://rstudio.github.io/profvis/) : profilage du code afin d'identifier les parties les plus coûteuses en temps de calcul.
+
+### Logging
+
+- [**{loggittr}**](https://guillaumepressiat.github.io/logrittr/) : ajoute un pipe qui crée un log pour ce pipe. Ce pipe peut remplacer le pipe `%>%` avec `logrittr_activate()`. Je préfère ce package à `{tidylog}` : on peut choisir ou non de log toutes les opérations, on peut avoir des logs même quand on n'utilise pas les fonctions `{dplyr}` mais qu'on utilise quand même le pipe, reste compatible avec une écriture *package* où le namespace est précisé. Incompatible avec le pipe de base R.
+- [**{logger}**](https://daroczig.github.io/logger/) : créer des logs avec différents niveaux. Simple, léger, efficace. Bonne gestion des niveaux.
+
+
+En résumé, `{logger}` quand on veut afficher des messages à certaines endroits précis (app shiny par exemple), `{loggittr}` si on veut log toutes les opérations classiques du `{tidyverse}` ou calquer à l'idée du pipe. 
+
+## Bases de données *SQL*
+
+- [**{DBI}**](https://dbi.r-dbi.org/) : interface standard pour les bases de données en R. Définit les fonctions génériques (`dbConnect()`, `dbGetQuery()`, `dbWriteTable()`, etc.) indépendamment du moteur utilisé.
+- [**{odbc}**](https://odbc.r-dbi.org/) : référence pour se connecter à des bases de données via ODBC (SQL Server, Oracle, PostgreSQL, Snowflake, etc.).
+- [**{dbplyr}**](https://dbplyr) : traduit automatiquement le code `{dplyr}` en SQL et exécute les calculs directement dans la base de données avec `collect()`. Mature et parfaitement intégré au tidyverse.
+- Connexion à des moteurs spécifiques : [**{ROracle}**](https://cran.r-project.org/package=ROracle), [**{rpostgres}**](https://rpostgres.r-dbi.org/), [**{MariaDB}**](https://rmariadb.r-dbi.org/).
+- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) : moteur analytique embarqué extrêmement performant, particulièrement adapté aux fichiers Parquet et aux jeux de données volumineux. Ne nécessite aucun serveur.
+    - [**{duckply}**](https://duckplyr.tidyverse.org/) : alternative à `{dplyr}` avec un appel direct à l'API de Duckdb sans passage par un code SQL. Plus rapide mais encore moins mature et moins riche fonctionnellement que `{dbplyr}`.
+    - [**{arrow}**](https://arrow.apache.org/docs/r/) : lecture et écriture de fichiers Parquet, Feather et autres formats colonaires. Complément naturel de `{duckdb}` pour les workflows de données volumineuses. [**{nanoparquet}**](https://nanoparquet.r-lib.org/) plus rapide pour les Parquet.
+- [**{pool}**](https://rstudio.github.io/pool/) : gestion de pools de connexions aux bases de données, particulièrement utile dans les applications Shiny.
+
+## Calcul sur des données volumineuses
+
+Pour la plupart des usages, **{duckdb}** est
+
+- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) :  aujourd'hui la solution recommandée : très performant, fonctionne hors mémoire, lit directement les fichiers Parquet et s'intègre parfaitement avec l'écosystème `{tidyverse}` avec `{dplyr}`.
+- [**{futurize}**](https://futurize.futureverse.org/) : goto pour la parallélisation. Permet de très simplement rendre les fonctions parallélisables grâce au [**{futureverse}**](https://www.futureverse.org/). Supporte de nombreuses fonctions comme `lapply()`, `purrr::map()`, ou `foreach::foreach()`.
+- [**{sparklyr}**](https://spark.posit.co/) : interface R vers Apache Spark. Permet de distribuer les calculs sur un cluster mais nécessite une infrastructure dédiée. Souvent excessif pour les besoins courants.
+- [**{data.table}**](https://r-datatable.com/) : référence historique pour les traitements rapides en mémoire. Extrêmement performant mais ne permet pas nativement de travailler sur des données plus grandes que la mémoire disponible. Beaucoup moins verbeux que le `{tidyverse}`, petit coût d'entrée, pour cela je ne préfère pas.
+- [**{polars}**](https://pola-rs.github.io/r-polars/) : interface R du moteur Polars écrit en Rust. Très performant sur les données volumineuses, avec exécution paresseuse (*lazy evaluation*) et traitements pouvant être effectués hors mémoire. Concurrent direct de l'association `{duckdb}` + `{arrow}`. Défaut similaire à `{data.table}` : très éloigné de la formulation `{tidyverse}`, reste plus verbeux. Avantage : uniformité de l'écriture ET du traitement en mémoire et hors mémoire.
+
+## Gestion des cartes
+
+### Données spatiales et cartographie, autour principalement de l'univers [**r-spatial**](https://rspatial.org)
+
+- [**{sf}**](https://r-spatial.github.io/sf/) : manipulation de données spatiales vectorielles : points, lignes, polygones.
+- [**{terra}**](https://rspatial.github.io/terra/) : traitement de rasters et analyse spatiale, notamment pour les fichiers volumineux.
+- [**{stars}**](https://r-spatial.github.io/stars/) : manipulation de données raster et de cubes spatio-temporels multidimensionnels (images satellites, météorologiques).
+- [**{tidyterra}**](https://dieghernan.github.io/tidyterra/) : manipulation d’objets `{terra}` avec une syntaxe proche du tidyverse.
+
+### Création de cartes
+
+- **Exploration** :
+  - [**{mapview}**](https://r-spatial.github.io/mapview/) : exploration rapide et interactive de données spatiales.
+
+- **Cartographie statiques** :
+  - [**{tmap}**](https://r-tmap.github.io/tmap/) : création de cartes statistiques, statiques ou interactives. Inspiré aussi de la grammar of graphics.
+  - [**{ggplot2}**](https://ggplot2.tidyverse.org/) : création de graphiques et de cartes statistiques avec `geom_sf()`. A utilisé surtout si on veut travailler avec d'autres graphiques `{ggplot2}` sinon `{tmap}` est plus efficace.
+  - [**{ggspatial}**](https://paleolimbot.github.io/ggspatial/) : ajout d’éléments cartographiques aux graphiques `{ggplot2}`.
+
+- **Cartographie interactives** :
+  - [**{leaflet}**](https://rstudio.github.io/leaflet/) : création de cartes interactives.
+
 ## Modélisation statistique et économétrique avec R
 
 
@@ -73,6 +193,8 @@ Le package `{stats}` (installé par défaut avec R) couvre la majorité des beso
 lm(y ~ x1 + x2, data = base)                       # Régression linéaire
 glm(y ~ x1 + x2, family = binomial(), data = base) # Logit
 ```
+
+`{stats}` est bien complété par [**{car}**](https://cran.r-project.org/package=car) : diagnostic statistique, analyses de variance et calcul d'indicateurs comme le VIF.
 
 ### Présenter et interpréter les résultats
 
@@ -137,95 +259,12 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
 - [**{xgboost}**](https://xgboost.readthedocs.io/) : gradient boosting, particulièrement performant sur les données tabulaires.
 - [**{brulee}**](https://cran.r-project.org/package=brulee) : réseaux de neurones entraînés dans l'écosystème `{tidymodels}`.
 
-## Outils, principalement [**r-lib**](https://github.com/r-lib)
-
-### Programmation avancée et gestion des environnements
-
-- [**{renv}**](https://rstudio.github.io/renv/) : gestion des environnements et des versions de packages propres à chaque projet.
-- [**{pak}**](https://pak.r-lib.org/) : installation de packages et résolution de leurs dépendances.
-- [**{keyring}**](https://keyring.r-lib.org/) : gestion des secrets.
-- [**{rlang}**](https://rlang.r-lib.org/) : programmation fonctionnelle et métaprogrammation, notamment les expressions, les environnements et la capture des arguments.
-- [**{vctrs}**](https://vctrs.r-lib.org/) : création de classes vectorielles et définition de leur comportement.
-- [**{cli}**](https://cli.r-lib.org/) : création de messages, avertissements et erreurs lisibles.
-- [**{lifecycle}**](https://lifecycle.r-lib.org/) : gestion des fonctions expérimentales, obsolètes ou dépréciées.
-- [**{withr}**](https://withr.r-lib.org/) : modification temporaire des options, variables d’environnement et répertoires de travail.
-- [**{memoise}**](https://memoise.r-lib.org/) : mise en cache des résultats de fonctions.
-- [**{groundhog}**](https://groundhogr.com/) : reproduction d’environnements en fixant les versions des packages utilisés.
-- [**{config}**](https://rstudio.github.io/config/) : permet de charger un fichier `config.yml` pour spécifier des adresses, ou des valeurs à utiliser dans l'ensemble d'un projet.
-
-### Développement de packages
-
-- [**{usethis}**](https://usethis.r-lib.org/) : création et configuration de packages, gestion de Git, GitHub, tests et documentation.
-- [**{roxygen2}**](https://roxygen2.r-lib.org/) : génération de la documentation et du fichier `NAMESPACE` à partir de commentaires dans le code.
-- [**{testthat}**](https://testthat.r-lib.org/) : écriture et exécution de tests unitaires.
-- [**{devtools}**](https://devtools.r-lib.org/) : développement, documentation, test, vérification et installation de packages.
-- [**{pkgdown}**](https://pkgdown.r-lib.org/) : génération d’un site de documentation pour un package.
-- [**{covr}**](https://covr.r-lib.org/) : mesure de la couverture des tests.
-- [**GitHub Actions**](https://docs.github.com/en/actions) : automatisation des tests et vérifications d’un package.
-
-- [**{targets}**](https://books.ropensci.org/targets/) : pipelines de données reproductibles, exécution incrémentale, parallélisation et projets analytiques complexes.
-
-- [**{config}**](https://rstudio.github.io/config/) : gestion des paramètresns selon l'environnement (développement, production, etc.).
-
-- [**{keyring}**](https://keyring.r-lib.org/) :  des mots de passe, jetons d'authentification et autres secrets.
-
-- [**{clock}**](https://clock.r-lib.org/) : manipulation avancée et dates, heures, calendriers et fuseaux horaires.
-
-- [**{tidylog}**](https://github.com/: remplacement transparent de `{dplyr}` affichant automatiquement les effets des opérations sur les données.
-
-- https://rstudio.github.io/pointblank/ : validation et contrôle qualité des données dans les pipelines de traitement.
-
-- [**{car}**](https://cran.r-project.org/package=car) iagnostic statistique, analyses de variance et calcul d'indicateurs comme le VIF.
-
-- [**{emmeans}**](https://emmeans.github.io/emmeans/) : estimation de moyennes marginales, contrastes et comparaisons post-hoc pour les modèles statistiques.
-
-- [**{scales}**](https://scales.r-lib.org/) : mise en forme des axes, labels, pourcentages, devises et graphiques sous `{ggplot2}`.
-
-- [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sansns les graphiques `{ggplot2}`.
-
-- [**{viridis}**](https://sjmgarnier.github.io/viridis/) : palettes de ellement uniformes, adaptées aux impressions et au daltonisme.
-
-- [**{officer}**](https://davidgohel.r/ : création et modification de documents Word et PowerPoint depuis R.
-
-- [**{rvg/davidgohel.github.io/rvg/ : export de graphiques vectoriels éditables dans PowerPoint ou Excel.
-
-- [**{httr2}**](https://httr2.r-lib.org/) : interface moderne avec des API web, télécharger des ressources et gérer l'authentification.
-
-- [**{jsonlite}**](https://jeroen.r-universe.dev/jsonlite)re et manipulation de données au format JSON.
-
-- https://bench.r-lib.org/ : mesure et comparaison des performances d'exécution du code R.
-
-- https://rstudio.github.io/profvis/ : profilage du code afin d'identifier les parties les plus coûteuses en temps de calcul.
-
-- https://docs.ropensci.org/skimr/ : production de résumés exploratoires lisibles et complets des jeux de données.
-
-- https://docs.ropensci.org/visdat/ : visualisation rapide de la structure des données, des types de variables et des valeurs manquantes.
-## Visualisations
-
-### Graphiques
-
-- [**{ggplot2}**](https://ggplot2.tidyverse.org/) : bibliothèque centrale pour produire la quasi-totalité des graphiques.
-- [**{ggpubr}**](https://rpkgs.datanovia.com/ggpubr/) : simplifie certains usages courants de `ggplot2`.
-- [**{GGally}**](https://ggobi.github.io/ggally/) : matrices de graphiques, corrélations et visualisation exploratoire.
-- [**{patchwork}**](https://patchwork.data-imaginist.com/) : assemblage de plusieurs graphiques `ggplot2`.
-
-### Thèmes et palettes pour ggplot2
-
-- [R Graph Gallery – Color palettes](https://r-graph-gallery.com/color-palette-finder) : outil interactif pour explorer et choisir des palettes.
-- [R Color Palettes](https://github.com/EmilHvitfeldt/r-color-palettes) : Repo qui regroupe et compare des packages de palettes. Propose son [**outils de choix de palettes**](https://emilhvitfeldt.github.io/r-color-palettes/).
-- [**{paletteer}**](https://emilhvitfeldt.github.io/paletteer/) : interface commune donnant accès à plusieurs milliers de palettes provenant de nombreux packages R. Les fonctions principales sont `paletteer_d()` pour les palettes discrètes, `paletteer_c()` pour les palettes continues et `paletteer_dynamic()` pour les palettes dont le nombre de couleurs peut varier. 
-- [**{ggthemes}**](https://jrnold.github.io/ggthemes/) : très bonne collection de thèmes.
-- [**{ggprism}**](https://csdaw.github.io/ggprism/) : thèmes et palettes inspirés du logiciel *prism*.
-- [**{colorspace}**](https://colorspace.r-forge.r-project.org/) : création, manipulation et évaluation de palettes de couleurs.
-
-### Tableaux publiables
-
-- [**{gt}**](https://gt.rstudio.com/) : création de tableaux de présentation soignés et prêts à publier.
-- [**{gtsummary}**](https://www.danieldsjoberg.com/gtsummary/) : création de tableaux statistiques et de tableaux de synthèse, notamment pour les analyses médicales et épidémiologiques.
-
 ## Création de sites internet et d'applications
 
 - [**{rsconnect}**](https://rstudio.github.io/rsconnect/) : déploiement d’applications Shiny, de documents Quarto ou R Markdown et de rapports sur shinyapps.io ou Posit Connect.
+- [**{httr2}**](https://httr2.r-lib.org/) : interface moderne avec des API web, télécharger des ressources et gérer l'authentification.
+- [**{plumber}**](https://www.rplumber.io/articles/introduction.html) : rendre R disponible par des APIs.
+- [**{jsonlite}**](https://jeroen.r-universe.dev/jsonlite) : lecture, écriture et manipulation de données au format JSON.
 
 ### [**{Shiny}**](https://shiny.posit.co/r/)
 
@@ -274,47 +313,3 @@ Beaucoup de packages existent pour analyser les séries temporelles. Je propose 
 - [**{formattable}**](https://renkun-ken.github.io/formattable/) : tableaux HTML avec mise en forme conditionnelle.
 - [**{flextable}**](https://davidgohel.github.io/flextable/) : tableaux mis en forme, exportables vers Word, PowerPoint, HTML et PDF.
 - [**{reactablefmtr}**](https://kcuilla.github.io/reactablefmtr/) : fonctions de mise en forme pour `{reactable}`.
-
-## Gestion des cartes
-
-### Données spatiales et cartographie, autour principalement de l'univers [**r-spatial**](https://rspatial.org)
-
-- [**{sf}**](https://r-spatial.github.io/sf/) : manipulation de données spatiales vectorielles : points, lignes, polygones.
-- [**{terra}**](https://rspatial.github.io/terra/) : traitement de rasters et analyse spatiale, notamment pour les fichiers volumineux.
-- [**{stars}**](https://r-spatial.github.io/stars/) : manipulation de données raster et de cubes spatio-temporels multidimensionnels (images satellites, météorologiques).
-- [**{tidyterra}**](https://dieghernan.github.io/tidyterra/) : manipulation d’objets `{terra}` avec une syntaxe proche du tidyverse.
-
-### Création de cartes
-
-- **Exploration** :
--   [**{mapview}**](https://r-spatial.github.io/mapview/) : exploration rapide et interactive de données spatiales.
-
-- **Cartographie statiques** :
-  - [**{tmap}**](https://r-tmap.github.io/tmap/) : création de cartes statistiques, statiques ou interactives. Inspiré aussi de la grammar of graphics.
-  - [**{ggplot2}**](https://ggplot2.tidyverse.org/) : création de graphiques et de cartes statistiques avec `geom_sf()`. A utilisé surtout si on veut travailler avec d'autres graphiques `{ggplot2}` sinon `{tmap}` est plus efficace.
-  - [**{ggspatial}**](https://paleolimbot.github.io/ggspatial/) : ajout d’éléments cartographiques aux graphiques `{ggplot2}`.
-
-- **Cartographie interactives** :
-  - [**{leaflet}**](https://rstudio.github.io/leaflet/) : création de cartes interactives.
-
-## Bases de données *SQL*
-
-- [**{DBI}**](https://dbi.r-dbi.org/) : interface standard pour les bases de données en R. Définit les fonctions génériques (`dbConnect()`, `dbGetQuery()`, `dbWriteTable()`, etc.) indépendamment du moteur utilisé.
-- [**{odbc}**](https://odbc.r-dbi.org/) : référence pour se connecter à des bases de données via ODBC (SQL Server, Oracle, PostgreSQL, Snowflake, etc.).
-- [**{dbplyr}**](https://dbplyr : traduit automatiquement le code `{dplyr}` en SQL et exécute les calculs directement dans la base de données avec `collect()`. Mature et parfaitement intégré au tidyverse.
-- Connexion à des moteurs spécifiques : [**{ROracle}**](https://cran.r-project.org/package=ROracle), [**{rpostgres}**](https://rpostgres.r-dbi.org/), [**{MariaDB}](https://rmariadb.r-dbi.org/).
-- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) : moteur analytique embarqué extrêmement performant, particulièrement adapté aux fichiers Parquet et aux jeux de données volumineux. Ne nécessite aucun serveur.
-    - [**{duckply}**](https://duckplyr.tidyverse.org/) : alternative à `{dplyr}` avec un appel direct à l'API de Duckdb sans passage par un code SQL. Plus rapide mais encore moins mature et moins riche fonctionnellement que `{dbplyr}`.
-    - [**{arrow}**](https://arrow.apache.org/docs/r/) : lecture et écriture de fichiers Parquet, Feather et autres formats colonaires. Complément naturel de `{duckdb}` pour les workflows de données volumineuses.[**{nanoparquet}**](https://nanoparquet.r-lib.org/) plus rapide pour les Parquet.
-- [**{pool}**](https://rstudio.github.io/pool/) : gestion de pools de connexions aux bases de données, particulièrement utile dans les applications Shiny.
-
-### Calcul sur des données volumineuses
-
-Pour la plupart des usages, **{duckdb}** est
-
-- [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) :  aujourd'hui la solution recommandée : très performant, fonctionne hors mémoire, lit directement les fichiers Parquet et s'intègre parfaitement avec l'écosystème `{tidyverse}` avec `{dplyr}`.
-- [**{futurize}**](https://futurize.futureverse.org/) : goto pour la parallélisation. Permet de très simplement rendre les fonctions parallélisables grâce au [**{futureverse}**](https://www.futureverse.org/). Supporte de nombreuses fonctions comme `lapply()`, `purrr::map()`, ou `foreach::foreach()`.
-- [**{sparklyr}**](https://spark.posit.co/) : interface R vers Apache Spark. Permet de distribuer les calculs sur un cluster mais nécessite une infrastructure dédiée. Souvent excessif pour les besoins courants.
-- [**{data.table}**](https://r-datatable.com/) : référence historique pour les traitements rapides en mémoire. Extrêmement performant mais ne permet pas nativement de travailler sur des données plus grandes que la mémoire disponible. Beaucoup moins verbeux que le `{tidyverse}`, petit coût d'entrée, pour cela je ne préfère pas.
-- [**{polars}**](https://pola-rs.github.io/r-polars/) : interface R du moteur Polars écrit en Rust. Très performant sur les données volumineuses, avec exécution paresseuse (*lazy evaluation*) et traitements pouvant être effectués hors mémoire. Concurrent direct de l'association `{duckdb}` + `{arrow}`. Défaut similaire à `{data.table}` : très éloigné de la formulation `{tidyverse}`, reste plus verbeux. Avantage : uniformité de l'écriture ET du traitement en mémoire et hors mémoire.
-
