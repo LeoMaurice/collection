@@ -20,6 +20,7 @@
 ## Institutions :
 
 - [**R Foundation** et **R Core Team**](https://www.r-project.org/)
+- [**r-lib**](https://r-lib.org/) : organisation à l'origine de nombreux packages fondamentaux de l'écosystème moderne R.
 - [**posit**](https://posit.co/) compagnie derrière RStudio, Positron. Soutien les développements de beaucoup d'aspects devenus essentiels de R comme `{tidyverse}`, `{ggplot2}`, `{shiny}`, `{quarto}` et beaucoup d'autres choses. Voir aussi [Hadley Wickham](https://hadley.nz/).
 - [**ROpenSci**](https://ropensci.org/) : soutien le développement de certains packages, surtout à but scientifique.
 
@@ -29,6 +30,7 @@
 - [**Aide-mémoire SAS → R**](https://nassab-abdallah.github.io/aide_memoire_r_sas/)
 - [**Learning R as a SAS User**](https://hutchdatascience.org/data_snacks/r_snacks/sas2r.html) : guide de transition SAS → R en anglais
 - [**{procs}**](https://procs.r-sassy.org/articles/procs.html) reproduit de nombreuses procédures SAS (`freq`, `means`, `report`, etc.). Il fait partie de l'écosystème [**{sassy}**](https://sassy.r-sassy.org/), conçu pour faciliter la transition SAS → R.
+- [**{logrittr}**](https://github.com/GuillaumePressiat/logrittr/) : permet d'avoir des logs similaires à SAS où chaque transformation génère des messages, avec le pipe `%>%` ou `%>=%`.
 
 ## Gestion des projets, outils minimaux
 
@@ -54,6 +56,7 @@
 - [**{janitor}**](https://sfirke.github.io/janitor/) : nettoyage rapide des données (`clean_names()`, tableaux de fréquences, etc.).
 - [**{clock}**](https://clock.r-lib.org/) : manipulation avancée et dates, heures, calendriers et fuseaux horaires.
 - [**{pointblanck}**](https://rstudio.github.io/pointblank/) : validation et contrôle qualité des données dans les pipelines de traitement.
+- [**{skimr}**](https://docs.ropensci.org/skimr/) : génère un excellent rapport d'introduction.
 
 ## Import / export
 
@@ -61,23 +64,15 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 
 Un fichier `.rds` correspond à un objet R unique (généralement un tableau de données, mais n'importe quel objet R peut devenir un `.rds`). Il est généralement préférable aux fichiers `.RData` produits par `save()` et relus avec `load()`.
 
-- [**{readr}**](https://readr.tidyverse.org/) : lecture et écriture des fichiers texte (`csv`, `txt`). `parse_number()` : très pratique pour convertir des strings de nombre en numérique, surtout s'ils sont formattés à la française.
+- [**{here}**](https://here.r-lib.org/) : facilite l'écriture des adresses.
+- [**{fs}**](https://fs.r-lib.org/) : manipulation moderne et multiplateforme des fichiers et dossiers.
+- [**{readr}**](https://readr.tidyverse.org/) : lecture et écriture des fichiers texte (`csv`, `txt`). `readr::parse_number("1,1", locale = readr::locale(decimal_mark = ","))` : très pratique pour convertir des strings de nombre en numérique, surtout s'ils sont formattés à la française.
 - [**{readxl}**](https://readxl.tidyverse.org/) : lecture des fichiers Excel.
 - [**{writexl}**](https://docs.ropensci.org/writexl/) : écriture des fichiers Excel.
 - [**{openxlsx**}](https://joshuasturm.github.io/openxlsx/index.html) : couvre les besoins de xlsx plus complexes (notamment métadonnées). 
 - [**{officer}**](https://davidgohel.github.io/officer/) : création et modification de documents Word et PowerPoint.
 - [**{nanoparquet}**](https://nanoparquet.r-lib.org/) : lecture et écriture des fichiers Parquet.
 - [**{qs}**](https://github.com/qsbase/qs) : génère des fichiers sérialisés (comme `saveRDS()` et `readRDS()`) mais plus rapide.
-- [**{here}**](https://here.r-lib.org/) : facilite l'écriture des adresses.
-
-Exemple utile pour lire correctement des nombres écrits au format français.
-
-```r
-readr::parse_number(
-  "1,1",
-  locale = readr::locale(decimal_mark = ",")
-)
-```
 
 ## Visualisations
 
@@ -88,7 +83,7 @@ readr::parse_number(
 - [**{GGally}**](https://ggobi.github.io/ggally/) : matrices de graphiques, corrélations et visualisation exploratoire.
 - [**{patchwork}**](https://patchwork.data-imaginist.com/) : assemblage de plusieurs graphiques `ggplot2`.
 - [**{scales}**](https://scales.r-lib.org/) : mise en forme des axes, labels, pourcentages, devises et graphiques sous `{ggplot2}`.
-- [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sansns les graphiques `{ggplot2}`.
+- [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sans collision pour les graphiques `{ggplot2}`.
 - [**{rvg}**](https://davidgohel.github.io/rvg/) : export de graphiques vectoriels éditables dans PowerPoint ou Excel. Très utile avec `{officer}`.
 
 ### Thèmes et palettes pour ggplot2
@@ -135,17 +130,21 @@ readr::parse_number(
 
 ### Logging
 
-- [**{loggittr}**](https://guillaumepressiat.github.io/logrittr/) : ajoute un pipe qui crée un log pour ce pipe. Ce pipe peut remplacer le pipe `%>%` avec `logrittr_activate()`. Je préfère ce package à `{tidylog}` : on peut choisir ou non de log toutes les opérations, on peut avoir des logs même quand on n'utilise pas les fonctions `{dplyr}` mais qu'on utilise quand même le pipe, reste compatible avec une écriture *package* où le namespace est précisé. Incompatible avec le pipe de base R.
+- [**{loggittr}**](https://guillaumepressiat.github.io/logrittr/) : ajoute un pipe qui crée un log pour ce pipe. Ce pipe peut remplacer le pipe `%>%` avec `logrittr_activate()`. Je préfère ce package à `{tidylog}` : on peut choisir ou non de log toutes les opérations, on peut avoir des logs même quand on n'utilise pas les fonctions `{dplyr}` mais qu'on utilise quand même le pipe, reste compatible avec une écriture *package* où le namespace est précisé. Incompatible avec le pipe de base R. Défaut : ne fonctionne que avec des fonctions `{dplyr}` ou base R sur des `data.frame`. Moins de fonctionnalité que `{lumberjack}`.
 - [**{logger}**](https://daroczig.github.io/logger/) : créer des logs avec différents niveaux. Simple, léger, efficace. Bonne gestion des niveaux.
 
-
 En résumé, `{logger}` quand on veut afficher des messages à certaines endroits précis (app shiny par exemple), `{loggittr}` si on veut log toutes les opérations classiques du `{tidyverse}` ou calquer à l'idée du pipe. 
+
+### Qualité du code
+
+- [**{styler}**](https://styler.r-lib.org/) : formatage ode R selon un style cohérent. Généralement utilisé via Positron, RStudio, VS Code ou GitHub Actions.
+- [**{lintr}**](https://lintr.r-lib.org/) : analyse statique du code permettant de détecter automatiquement des problèmes de style ou des erreurs potentielles. Souvent intégré à l'éditeur ou aux pipelines CI/CD.
 
 ## Bases de données *SQL*
 
 - [**{DBI}**](https://dbi.r-dbi.org/) : interface standard pour les bases de données en R. Définit les fonctions génériques (`dbConnect()`, `dbGetQuery()`, `dbWriteTable()`, etc.) indépendamment du moteur utilisé.
 - [**{odbc}**](https://odbc.r-dbi.org/) : référence pour se connecter à des bases de données via ODBC (SQL Server, Oracle, PostgreSQL, Snowflake, etc.).
-- [**{dbplyr}**](https://dbplyr) : traduit automatiquement le code `{dplyr}` en SQL et exécute les calculs directement dans la base de données avec `collect()`. Mature et parfaitement intégré au tidyverse.
+- [**{dbplyr}**](https://dbplyr.tidyverse.org/) : traduit automatiquement le code `{dplyr}` en SQL et exécute les calculs directement dans la base de données avec `collect()`. Mature et parfaitement intégré au tidyverse.
 - Connexion à des moteurs spécifiques : [**{ROracle}**](https://cran.r-project.org/package=ROracle), [**{rpostgres}**](https://rpostgres.r-dbi.org/), [**{MariaDB}**](https://rmariadb.r-dbi.org/).
 - [**{duckdb}**](https://duckdb.org/docs/stable/clients/r) : moteur analytique embarqué extrêmement performant, particulièrement adapté aux fichiers Parquet et aux jeux de données volumineux. Ne nécessite aucun serveur.
     - [**{duckply}**](https://duckplyr.tidyverse.org/) : alternative à `{dplyr}` avec un appel direct à l'API de Duckdb sans passage par un code SQL. Plus rapide mais encore moins mature et moins riche fonctionnellement que `{dbplyr}`.
