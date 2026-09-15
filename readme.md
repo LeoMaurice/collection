@@ -50,6 +50,7 @@ g# Essentiels pour R
 - Des ressources dans {**utilitR**}.
 - [**Aide-mémoire SAS → R**](https://nassab-abdallah.github.io/aide_memoire_r_sas/)
 - [**Learning R as a SAS User**](https://hutchdatascience.org/data_snacks/r_snacks/sas2r.html) : guide de transition SAS → R en anglais.
+- [**{haven}**](https://haven.tidyverse.org/) : pour lire les fichiers SAS (.sas7bdat), SPSS, Stata. Pas d'écriture. Basé sur la bibliothèque C *ReadStat* sur la quelle repose l'ensemble des moyens de lecture non propriétaires de SAS.
 - [**{procs}**](https://procs.r-sassy.org/articles/procs.html) reproduit de nombreuses procédures SAS (`freq`, `means`, `report`, etc.). Il fait partie de l'écosystème [**{sassy}**](https://sassy.r-sassy.org/), conçu pour faciliter la transition SAS → R.
 - [**{tidylog}**](https://github.com/elbersb/tidylog) : log l'ensemble des opérations `{dplyr}` et `{tidyr}` pour simuler le comportement de SAS avec le `{tidyverse}`.
 
