@@ -394,7 +394,9 @@ Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains o
 
 ## Miscellaneous
 - [**{reticulate}**](https://rstudio.github.io/reticulate/) : interface R à Python.
+- bien mettre `(expression booléenne) * nombre` si on veut utiliser un booléen comme 0/1 pour éviter des effets bizarres, notamment de `!`.
 
+## Rappel sur les expressions
 
 ## Rapide description de chaque système OO
 
