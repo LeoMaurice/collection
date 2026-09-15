@@ -61,6 +61,7 @@ g# Essentiels pour R
 - [**{keyring}**](https://keyring.r-lib.org/) : gestion des secrets.
 - [**{config}**](https://rstudio.github.io/config/) : permet de charger un fichier `config.yml` pour spécifier des adresses, ou des valeurs à utiliser dans l'ensemble d'un projet.
 - [**{targets}**](https://books.ropensci.org/targets/) : créer des pipelines de traitements efficaces.
+- [**{progress}**](https://r-lib.github.io/progress/) : barre de progression dans la console.
 
 ## La manipulation de données avec le [**{tidyverse}**](https://tidyverse.org/)
 
