@@ -123,7 +123,7 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 
 ### Tableaux publiables
 
-- [**{gt}**](https://gt.rstudio.com/) : création de tableaux de présentation soignés et prêts à publier.
+- [**{gt}**](https://gt.rstudio.com/) : création de tableaux de présentation soignés et prêts à publier. `gt::ftm()` est particulièrement utile pour formatter.
 - [**{gtsummary}**](https://www.danieldsjoberg.com/gtsummary/) : création de tableaux statistiques et de tableaux de synthèse, notamment pour les analyses médicales et épidémiologiques.
 
 ## Outils, principalement [**r-lib**](https://github.com/r-lib)
