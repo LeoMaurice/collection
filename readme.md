@@ -45,6 +45,7 @@ g# Essentiels pour R
 
 - [**R Journal**](https://journal.r-project.org/index.html) : mené par le *R Foundation*.
 - [**Journal of Open Source Software**](https://joss.theoj.org/) : beaucoup des grands packages y sont présentés.
+- [**Journal of Statistical Software**](https://www.jstatsoft.org/) : beaucoup des grands packages y sont présentés.
 
 ## Pour les anciens utilisateurs de SAS :
 - Des ressources dans {**utilitR**}.
