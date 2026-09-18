@@ -62,7 +62,8 @@ g# Essentiels pour R
 - [**{keyring}**](https://keyring.r-lib.org/) : gestion des secrets.
 - [**{config}**](https://rstudio.github.io/config/) : permet de charger un fichier `config.yml` pour spécifier des adresses, ou des valeurs à utiliser dans l'ensemble d'un projet.
 - [**{targets}**](https://books.ropensci.org/targets/) : créer des pipelines de traitements efficaces.
-- [**{progress}**](https://r-lib.github.io/progress/) : barre de progression dans la console.
+- [**{cli}**](https://cli.r-lib.org/) : outils pour l'interface console/terminal : barre de chargement, création de messages, avertissements et erreurs lisibles.
+- [**{progress}**](https://r-lib.github.io/progress/) : barre de progression dans la console. Bug sur positron/rstudio. Utilisée celle de `{cli}`
 
 ## La manipulation de données avec le [**{tidyverse}**](https://tidyverse.org/)
 
@@ -133,7 +134,6 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 
 - [**{rlang}**](https://rlang.r-lib.org/) : programmation fonctionnelle et métaprogrammation, notamment les expressions, les environnements et la capture des arguments.
 - [**{vctrs}**](https://vctrs.r-lib.org/) : création de classes vectorielles et définition de leur comportement.
-- [**{cli}**](https://cli.r-lib.org/) : création de messages, avertissements et erreurs lisibles.
 - [**{lifecycle}**](https://lifecycle.r-lib.org/) : gestion des fonctions expérimentales, obsolètes ou dépréciées.
 - [**{withr}**](https://withr.r-lib.org/) : modification temporaire des options, variables d’environnement et répertoires de travail.
 - [**{memoise}**](https://memoise.r-lib.org/) : mise en cache des résultats de fonctions.
