@@ -11,6 +11,7 @@ g# Essentiels pour R
 - [**R OpenGov**](https://ropengov.org/) : packages gouvernementaux d'accès aux données.
 - [**Ressources shiny de ThinkR**](https://connect.thinkr.fr/connect/#/welcome)
 - [**Présentation des grands packages et fonctions sous forme de dessin !**](https://allisonhorst.com/r-packages-functions) par Allison Horst.
+- [**Ressources R, Python, Data science, data viz par Nicola Rennie**](https://nrennie.rbind.io/resources/).
 
 ### Livres programmation en R
 
