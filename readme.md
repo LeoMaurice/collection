@@ -73,7 +73,7 @@ g# Essentiels pour R
 - [**{stringr}**](https://stringr.tidyverse.org/) : manipulation, recherche, extraction et remplacement dans les chaînes de caractères. Basé sur [**{stringi}**](https://stringi.gagolewski.com/). 
 - [**{forcats}**](https://forcats.tidyverse.org/) : manipulation des variables qualitatives (`factor`), notamment le réordonnancement et le regroupement des modalités.
 - [**{lubridate}**](https://lubridate.tidyverse.org/) : création, manipulation, comparaison et extraction d’informations à partir de dates et d’heures.
-- [**{purrr}**](https://purrr.tidyverse.org/) : programmation fonctionnelle et application de fonctions à des vecteurs, listes ou colonnes de données.
+- [**{purrr}**](https://purrr.tidyverse.org/) : programmation fonctionnelle et application de fonctions à des vecteurs, listes ou colonnes de données. Utiliser [**{progressify}**](https://progressify.futureverse.org/) pour facilement avoir une barre de progression.
 - [**{tibble}**](https://tibble.tidyverse.org/) : version moderne des `data.frame`, conçue pour être plus lisible et adaptée à la manipulation avec le tidyverse.
 - [**{glue}**](https://glue.tidyverse.org/) : insertion d’expressions R dans des chaînes de caractères.
 
