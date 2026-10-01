@@ -1,4 +1,4 @@
-g# Essentiels pour R
+# Essentiels pour R
 
 ## Ecosystème
 
