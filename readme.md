@@ -111,7 +111,7 @@ Pour stocker des données temporaires ou à usage interne, il est conseillé d'u
 - [**{scales}**](https://scales.r-lib.org/) : mise en forme des axes, labels, pourcentages, devises et graphiques sous `{ggplot2}`.
 - [**{ggrepel}**](https://ggrepel.slowkow.com/) : ajout d'annotations et d'étiquettes intelligentes sans collision pour les graphiques `{ggplot2}`.
 - [**{gganimate}**](https://gganimate.com/) : ajout d'animations pour les graphiques `{ggplot2}`.
-- [**{ggforce}**](https://ggforce.data-imaginist.com/) : fonctionnalités supplémentaires pour ultra personnalisé à la `D3.js`.
+- [**{ggforce}**](https://ggforce.data-imaginist.com/) : fonctionnalités supplémentaires pour ultra personnalisé à la `D3.js`. Vous cherchez à faire qqc avec ggplot sans réussir : regarder ggforce si la solution n'y ait pas.
 - [**{ggraph}**](https://ggraph.data-imaginist.com/) : créer des graphiques. va de pair avec [`{tidygraph}`](https://github.com/thomasp85/tidygraph) pour manipuler les graphs le plus tidy possible.
 - [**{rayshader}**](https://www.rayshader.com/) : produire des graphiques et cartes avec un effet 3D d'ombre.
 - [**{rvg}**](https://davidgohel.github.io/rvg/) : export de graphiques vectoriels éditables dans PowerPoint ou Excel. Très utile avec `{officer}`.
