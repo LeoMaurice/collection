@@ -336,7 +336,7 @@ Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains o
 - [**{echarts4r}**](https://echarts4r.john-coene.com/) : interface R pour Apache ECharts.
 - [**{plotly}**](https://plotly-r.com/) : création de graphiques interactifs. `ggplotly()` convertit un graphique `{ggplot2}`. N'est plus directement supporté par l'équipe de `plotly.js` qui se concentre sur la librairie js en elle-même et son wrapper python. Posit finance encore son développement mais potentiellement une certaine différence entre `plotly.js` et `{plotly}`. La fonction `ggplotly()` convertit un graphique `{ggplot2}` en `plotly.js` mais trop lent à mon goût.
 - [**{highcharter}**](https://jkunst.com/highcharter/) : interface R pour Highcharts. **Attention license commerciale de Highcharts**.
-- [**{apexcharter}**](https://dreamrs.github.io/apexcharter/) : htmlwidgets pour `apexcharter.js`.
+- [**{apexcharter}**](https://dreamrs.github.io/apexcharter/) : htmlwidgets pour `apexcharter.js`. Semble plus facile à utiliser que `{plotly}`.
 
 ### Tableaux interactifs et tableaux de synthèse
 
