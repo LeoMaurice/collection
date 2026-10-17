@@ -16,6 +16,7 @@
 ### Livres programmation en R
 
 - [**R for data science**](https://r4ds.hadley.nz/) : excellent livre d'entrée pour des statisticiens par **Hadley Wickham**.
+- [**Stat learning**](https://www.statlearning.com/) : livre en R et Python pour apprendre à en python ou R les grands besoins statistiques.
 - [**Advanced R**](https://adv-r.hadley.nz/) : le livre de référence si on veut comprendre les possibilités de par **Hadley Wickham**. La partie *object-oriented programming* et *meta-programming* sont particulièrement utiles.
 - [**R Packages**](https://r-pkgs.org/) : essentiel pour apprendre à écrire un package en R, avec l'ensemble des bonnes pratiques par **Hadley Wickham**.
 - [**What they forgot to teach you about R**](https://rstats.wtf/) : un titre pompeux ou ironique mais beaucoup de très bons conseils sur la gestion d'un projet R. En cours.
