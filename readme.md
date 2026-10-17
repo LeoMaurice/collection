@@ -39,6 +39,7 @@
 - **Entreprises d'accompagnement et de formation en R** :
  - [**Ardata**](https://www.ardata.fr/) : derrière notamment `{ggiraph}`, `{rvg}`, `{flextable}` `{officer}`, maintenus par [David Gohel](https://github.com/davidgohel/rvg/commits?author=davidgohel).
  - [**ThinkR**](https://thinkr.fr/) : derrière notamment `{golem}`.
+ - [**DreamRs**](https://www.dreamrs.fr/) : derrière notamment `{shinyWidgets` et `{apexcharter}`.
 - Autres entreprises de l'environnement *data science* :
  - [**QuantStack**](https://quantstack.net/) : derrière [`jupyter`](https://jupyter.org/) et [`emscripten`](https://emscripten.org/) en autres.
 
@@ -335,6 +336,7 @@ Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains o
 - [**{echarts4r}**](https://echarts4r.john-coene.com/) : interface R pour Apache ECharts.
 - [**{plotly}**](https://plotly-r.com/) : création de graphiques interactifs. `ggplotly()` convertit un graphique `{ggplot2}`. N'est plus directement supporté par l'équipe de `plotly.js` qui se concentre sur la librairie js en elle-même et son wrapper python. Posit finance encore son développement mais potentiellement une certaine différence entre `plotly.js` et `{plotly}`. La fonction `ggplotly()` convertit un graphique `{ggplot2}` en `plotly.js` mais trop lent à mon goût.
 - [**{highcharter}**](https://jkunst.com/highcharter/) : interface R pour Highcharts. **Attention license commerciale de Highcharts**.
+- [**{apexcharter}**](https://dreamrs.github.io/apexcharter/) : htmlwidgets pour `apexcharter.js`.
 
 ### Tableaux interactifs et tableaux de synthèse
 
@@ -355,6 +357,7 @@ Des packages comme `{spacyr}`, `{text}` et `{talk}` rendent toutefois certains o
 - [**{bslib}**](https://rstudio.github.io/bslib/) : outils pour créer des interfaces Shiny modernes et personnalisables avec Bootstrap 5.
 - [**{watcher}**](https://watcher.r-lib.org/) : surveillance des modifications des fichiers du projet, notamment utilisée par `shiny::devmode()` lorsqu’elle est installée.
 - [**{htmlwidgets}**](https://www.htmlwidgets.org/) : framework permettant d’utiliser des visualisations JavaScript interactives dans R, R Markdown, Quarto et Shiny.
+- [**{packer}**](https://github.com/JohnCoene/packer) : framework pour utiliser des bibliothèques JS npm.
 - [**{shinyWidgets}**](https://dreamrs.github.io/shinyWidgets/) : collection de widgets et de composants d’interface supplémentaires pour Shiny, notamment des sélecteurs, boutons, interrupteurs, curseurs et alertes.
 - [**{reactlog}**](https://rstudio.github.io/reactlog/) : outil de visualisation et de débogage du graphe des dépendances réactives d’une application Shiny.
 - Outils légers, simples et efficaces de [**Dean Attali**](https://github.com/daattali?tab=repositories&q=shiny&type&language&sort) :
